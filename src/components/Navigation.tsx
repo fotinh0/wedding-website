@@ -17,11 +17,11 @@ export default function Navigation({
 
   return (
     <nav className="w-full z-50 bg-white/98 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between gap-4 items-center h-35 sm:flex-col sm:justify-normal">
+      <div className="max-w-7xl mx-auto px-4 pt-2 sm:px-6 lg:px-8">
+        <div className="flex justify-between gap-4 items-center h-35 md:flex-col md:justify-normal">
           <h1
             onClick={() => onNavigate('home')}
-            className="text-5xl text-black tracking-wide cursor-pointer sm:mt-6"
+            className="text-6xl text-black tracking-wide cursor-pointer sm:mt-6"
           >
             Indiana & Foti
           </h1>
@@ -44,7 +44,7 @@ export default function Navigation({
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700 hover:text-black transition-colors"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </div>

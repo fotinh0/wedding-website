@@ -1,162 +1,106 @@
-import { MapPin, Hotel, Plane, Car, Info } from 'lucide-react';
+import Marquee from 'react-fast-marquee';
+import travelCollage from '../assets/travelCollage.png';
+
+const images = [travelCollage];
 
 export default function TravelPage() {
-  const hotels = [
-    {
-      name: 'Riverside Inn',
-      distance: '0.2 miles from venue',
-      phone: '(555) 123-4567',
-      website: 'riversideinn.com',
-      note: 'Special wedding rate available',
-    },
-    {
-      name: 'Garden Suites Hotel',
-      distance: '0.5 miles from venue',
-      phone: '(555) 234-5678',
-      website: 'gardensuiteshotel.com',
-      note: 'Complimentary breakfast included',
-    },
-    {
-      name: 'Downtown Plaza Hotel',
-      distance: '2 miles from venue',
-      phone: '(555) 345-6789',
-      website: 'downtownplaza.com',
-      note: 'Near restaurants and shopping',
-    },
-  ];
-
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16">
-      <div className="text-center mb-20 border-b border-gray-200 pb-12">
-        <div className="w-px h-16 bg-black mx-auto mb-8"></div>
-        <h1 className="text-6xl md:text-7xl font-serif font-light text-black mb-6 tracking-wide">
-          Travel & Accommodations
-        </h1>
-        <p className="text-xl text-gray-600 font-light tracking-wide">
-          Everything you need to know for your trip
+    <div className="mx-auto sm:pt-12">
+      <video
+        className="max-h-[80vh] mx-auto"
+        controls
+        loop
+        preload="auto"
+        autoPlay
+      >
+        <source
+          src={
+            'https://palevioletred-guanaco-529765.hostingersite.com/wp-content/uploads/2025/03/zoe-hora-home-transcode.mp4'
+          }
+          type="video/mp4"
+        />
+      </video>
+
+      <div className="text-center my-24 mx-6 border-gray-200">
+        <p className="text-lg font-light sm:w-3xl mx-auto">
+          We’re so excited to welcome you to{' '}
+          <span className="font-bold">Dhërmi, Albania</span> for our wedding! To
+          help make your travel planning easier, we’ve gathered a few details
+          below. We’ll continue to update this page and send a text once
+          additional travel and hotel information is finalized.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-20">
-        <div className="bg-gray-50 border border-gray-200 p-10">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="bg-black text-white p-4">
-              <MapPin className="w-6 h-6" strokeWidth={1.5} />
-            </div>
-            <h2 className="text-3xl font-serif font-light text-black tracking-wide">
-              Venue Location
-            </h2>
-          </div>
-          <div className="space-y-3 text-gray-600 font-light">
-            <p className="font-medium text-black">Riverside Gardens</p>
-            <p>123 Garden Lane</p>
-            <p>Riverside, California 92501</p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 text-black hover:text-gray-600 font-light border-b border-black"
-            >
-              View on Google Maps →
-            </a>
+      {/* Collage section */}
+      <Marquee speed={30}>
+        {[...images, ...images].map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`wedding-${i}`}
+            className="h-[50vh] w-auto object-cover"
+          />
+        ))}
+      </Marquee>
+
+      <div className="pt-24 flex flex-col gap-12">
+        <div className="flex flex-col justify-center text-center px-6">
+          <h3 className="text-3xl playfair mb-6">Hotel Accommodations</h3>
+          <div className="sm:w-3xl mx-auto">
+            <p>
+              If you’re planning to stay at Zoe Hora, we’ll be sharing more
+              details soon about how to access our special discounted rates as
+              our guests — so stay tuned! There are also several lovely hotels
+              and villas nearby in Dhërmi and neighboring coastal towns.
+            </p>
           </div>
         </div>
-
-        <div className="bg-gray-50 border border-gray-200 p-10">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="bg-black text-white p-4">
-              <Car className="w-6 h-6" strokeWidth={1.5} />
-            </div>
-            <h2 className="text-3xl font-serif font-light text-black tracking-wide">
-              Parking
-            </h2>
-          </div>
-          <div className="space-y-3 text-gray-600 font-light">
-            <p>Free parking is available on-site for all guests.</p>
-            <p>Valet service will be provided at the main entrance.</p>
-            <p className="pt-2 text-sm text-gray-500">
-              For guests with accessibility needs, please contact us in advance.
+        <div className="flex flex-col justify-center text-center bg-zinc-50 py-12 px-6">
+          {/* <h2 className="text-5xl">Hotel Accommodations</h2> */}
+          <h3 className="text-3xl playfair mb-6">Getting There</h3>
+          <div className="sm:w-3xl mx-auto">
+            <p>
+              The nearest airport is Tirana International Airport (TIA), about a
+              2.5-hour drive from our wedding location. We recommend planning
+              your travel accordingly. We’ll share more tips soon about
+              transportation options and car rentals to make your journey as
+              smooth as possible.
             </p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center text-center px-6">
+          <h3 className="text-3xl playfair mb-6">Exploring the South</h3>
+          <div className="sm:w-3xl mx-auto">
+            <p>
+              We encourage you to take time to explore Albania’s breathtaking
+              southern coast. Towns like Himarë, Vuno, and Sarandë offer
+              beautiful beaches, charming seaside restaurants, and incredible
+              views.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center text-center bg-zinc-50 py-12 px-6">
+          {/* <h2 className="text-5xl">Hotel Accommodations</h2> */}
+          <h3 className="text-3xl playfair mb-6">Travel Tips</h3>
+          <div className="sm:w-3xl mx-auto">
+            <ul>
+              <li>
+                <span className="font-bold">Currency:</span> Albanian Lek (ALL)
+                or Euro
+              </li>
+              <li>
+                <span className="font-bold">Driving:</span> Roads along the
+                coast are scenic but winding — plan extra time for travel.
+              </li>
+              <li>
+                <span className="font-bold">Language</span> English is commonly
+                spoken in tourist areas.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div className="bg-gray-50 border border-gray-200 p-10 mb-20">
-        <div className="flex items-center gap-4 mb-10">
-          <div className="bg-black text-white p-4">
-            <Plane className="w-6 h-6" strokeWidth={1.5} />
-          </div>
-          <h2 className="text-3xl font-serif font-light text-black tracking-wide">
-            Getting There
-          </h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-medium text-black mb-3 tracking-wide">
-              By Air
-            </h3>
-            <p className="text-gray-600 text-sm font-light">
-              Ontario International Airport (ONT) is 15 miles away. Los Angeles
-              International Airport (LAX) is 60 miles away.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-black mb-3 tracking-wide">
-              By Car
-            </h3>
-            <p className="text-gray-600 text-sm font-light">
-              The venue is easily accessible from I-215 and SR-60. GPS
-              coordinates: 33.9533° N, 117.3962° W
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-black mb-3 tracking-wide">
-              Rideshare
-            </h3>
-            <p className="text-gray-600 text-sm font-light">
-              Uber and Lyft are readily available in the area. Set your
-              destination to "Riverside Gardens."
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-20">
-        <div className="flex items-center gap-4 mb-10">
-          <div className="bg-black text-white p-4">
-            <Hotel className="w-6 h-6" strokeWidth={1.5} />
-          </div>
-          <h2 className="text-3xl font-serif font-light text-black tracking-wide">
-            Recommended Hotels
-          </h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {hotels.map((hotel, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 border border-gray-200 p-8 hover:bg-white transition-colors"
-            >
-              <h3 className="text-2xl font-serif font-light text-black mb-4 tracking-wide">
-                {hotel.name}
-              </h3>
-              <div className="space-y-2 text-sm text-gray-600 font-light">
-                <p className="flex items-start gap-2">
-                  <MapPin
-                    className="w-4 h-4 text-black flex-shrink-0 mt-0.5"
-                    strokeWidth={1.5}
-                  />
-                  <span>{hotel.distance}</span>
-                </p>
-                <p>📞 {hotel.phone}</p>
-                <p>🌐 {hotel.website}</p>
-                <p className="pt-3 text-black font-medium">{hotel.note}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="bg-black text-white p-12">
+      {/* <div className="bg-black text-white p-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="bg-white text-black p-4">
             <Info className="w-6 h-6" strokeWidth={1.5} />
@@ -183,7 +127,7 @@ export default function TravelPage() {
             hesitate to contact us at wedding@sarahandmichael.com
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
