@@ -36,7 +36,7 @@ export default function SchedulePage({ language }: { language: Language }) {
       <img
         src={happinessMobile}
         alt="schedule-collage"
-        className="h-fit sm:max-h-[60vh] mx-auto sm:hidden"
+        className="max-h-[35vh] mx-auto sm:hidden"
       />
       <img
         src={happiness}
