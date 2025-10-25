@@ -6,13 +6,12 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import type { Language } from '../types';
 import homepageTranslations from '../translations/homepage';
+import foreheadkiss from '../assets/forehead-kiss.jpg';
+import kissing from '../assets/kissing.jpg';
+import hugging from '../assets/hugging.jpg';
+import standing from '../assets/standing.jpg';
 
-const images = [
-  '/src/assets/forehead-kiss.jpg',
-  '/src/assets/kissing.JPG',
-  '/src/assets/hugging.jpg',
-  '/src/assets/standing.JPG',
-];
+const images = [foreheadkiss, kissing, hugging, standing];
 
 interface HomePageProps {
   language: Language;
