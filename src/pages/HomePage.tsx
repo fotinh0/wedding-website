@@ -11,8 +11,6 @@ import kissing from '../assets/kissing.jpg';
 import hugging from '../assets/hugging.jpg';
 import standing from '../assets/standing.jpg';
 
-const images = [foreheadkiss, kissing, hugging, standing];
-
 interface HomePageProps {
   language: Language;
 }
@@ -54,7 +52,16 @@ export default function HomePage({ language }: HomePageProps) {
           <ChevronDown size={40} color="white" />
         </div>
         <Marquee speed={speed}>
-          {[...images, ...images].map((src, i) => (
+          {[
+            foreheadkiss,
+            kissing,
+            hugging,
+            standing,
+            foreheadkiss,
+            kissing,
+            hugging,
+            standing,
+          ].map((src, i) => (
             <img
               key={i}
               src={src}

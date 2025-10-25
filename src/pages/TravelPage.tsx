@@ -3,8 +3,6 @@ import travelCollage from '../assets/travelCollage.png';
 import type { Language } from '../types';
 import travelTranslations from '../translations/travel';
 
-const images = [travelCollage];
-
 export default function TravelPage({ language }: { language: Language }) {
   const t = travelTranslations[language.code];
 
@@ -225,7 +223,7 @@ export default function TravelPage({ language }: { language: Language }) {
 
       {/* Collage section */}
       <Marquee speed={50}>
-        {[...images, ...images, ...images].map((src, i) => (
+        {[travelCollage, travelCollage, travelCollage].map((src, i) => (
           <img
             key={i}
             src={src}
