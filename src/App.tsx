@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { Language, NavigationItem } from './types';
 import HomePage from './pages/HomePage';
-import SchedulePage from './pages/SchdeulePage';
+import SchedulePage from './pages/SchedulePage';
 import TravelPage from './pages/TravelPage';
 import Navigation from './components/Navigation';
 import FAQPage from './pages/FAQPage';
