@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import type { NavigationItem } from './types';
+import type { Lang, NavigationItem } from './types';
 import HomePage from './pages/HomePage';
 import SchedulePage from './pages/SchdeulePage';
-import RSVPPage from './pages/RSVPPage';
 import TravelPage from './pages/TravelPage';
 import Navigation from './components/Navigation';
 import FAQPage from './pages/FAQPage';
@@ -11,14 +10,13 @@ import BackToTop from './components/BackToTop';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [currentLang, setCurrentLang] = useState<Lang>('en');
 
   const navigationItems: NavigationItem[] = [
     { name: 'Home', href: 'home' },
     { name: 'Schedule', href: 'schedule' },
-    // { name: 'RSVP', href: 'rsvp' },
-    // { name: 'Gallery', href: 'gallery' },
     { name: 'Travel', href: 'travel' },
-    { name: 'FAQ', href: 'faq' },
+    { name: 'FAQs', href: 'faqs' },
   ];
 
   const handleNavigate = (page: string) => {
@@ -33,11 +31,9 @@ function App() {
         return <HomePage />;
       case 'schedule':
         return <SchedulePage />;
-      case 'rsvp':
-        return <RSVPPage />;
       case 'travel':
         return <TravelPage />;
-      case 'faq':
+      case 'faqs':
         return <FAQPage />;
       default:
         return <HomePage />;
@@ -50,6 +46,8 @@ function App() {
         currentPage={currentPage}
         onNavigate={handleNavigate}
         items={navigationItems}
+        currentLang={currentLang}
+        setCurrentLang={setCurrentLang}
       />
       {renderPage()}
       <Footer />

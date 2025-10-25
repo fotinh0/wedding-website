@@ -11,3 +11,5 @@ export interface WeddingDetails {
   ceremony: string;
   reception: string;
 }
+
+export type Lang = 'en' | 'es' | 'sq';

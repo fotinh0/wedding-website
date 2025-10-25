@@ -1,11 +1,13 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import type { NavigationItem } from '../types';
+import type { Lang, NavigationItem } from '../types';
 
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
   items: NavigationItem[];
+  currentLang: Lang;
+  setCurrentLang: (lang: Lang) => void;
 }
 
 export default function Navigation({
@@ -18,10 +20,10 @@ export default function Navigation({
   return (
     <nav className="w-full z-50 bg-white/98 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 pt-2 sm:px-6 lg:px-8">
-        <div className="flex justify-between gap-4 items-center h-35 md:flex-col md:justify-normal">
+        <div className="flex justify-between gap-4 items-center h-30 sm:h-35 md:flex-col md:justify-normal">
           <h1
             onClick={() => onNavigate('home')}
-            className="text-6xl text-black tracking-wide cursor-pointer sm:mt-6"
+            className="text-[2.8rem] sm:text-6xl text-black tracking-wide cursor-pointer sm:mt-6"
           >
             Indiana & Foti
           </h1>
@@ -50,7 +52,7 @@ export default function Navigation({
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden border-t border-gray-200 bg-white">
           <div className="px-4 py-4 space-y-3">
             {items.map((item) => (
               <button
