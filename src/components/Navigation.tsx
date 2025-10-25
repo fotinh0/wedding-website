@@ -25,7 +25,7 @@ export default function Navigation({
     <nav className="w-full z-50 bg-white/98 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 pt-2 sm:px-6 lg:px-8">
         {createPortal(
-          <div className="hidden md:block absolute top-2 right-4 sm:top-4 sm:right-10 z-50">
+          <div className="block absolute top-2 right-4 sm:top-4 sm:right-10 z-50">
             <LanguageDropdown
               selectedLanguage={selectedLanguage}
               setSelectedLanguage={setSelectedLanguage}
@@ -33,7 +33,7 @@ export default function Navigation({
           </div>,
           document.body
         )}
-        <div className="flex justify-between gap-4 items-center h-30 sm:h-35 md:flex-col md:justify-normal">
+        <div className="flex justify-between gap-4 items-center h-30 sm:h-35 md:flex-col md:justify-normal pt-4 sm:pt-0">
           <h1
             onClick={() => onNavigate('home')}
             className="text-[2.8rem] sm:text-6xl text-black tracking-wide cursor-pointer sm:mt-6"
@@ -83,12 +83,6 @@ export default function Navigation({
                 {item.name}
               </button>
             ))}
-            <div className="border-t border-gray-100 px-4 pt-4 flex z-60">
-              <LanguageDropdown
-                selectedLanguage={selectedLanguage}
-                setSelectedLanguage={setSelectedLanguage}
-              />
-            </div>
           </div>
         </div>
       )}

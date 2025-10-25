@@ -171,10 +171,11 @@ export default function TravelPage({ language }: { language: Language }) {
     <div className="mx-auto pt-4 sm:pt-0">
       <video
         className="max-h-[80vh] mx-auto"
-        controls
         loop
         preload="auto"
+        muted
         autoPlay
+        playsInline
       >
         <source
           src={

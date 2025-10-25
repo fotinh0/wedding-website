@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import type { Language } from '../types';
 import languages from '../utils/languages';
-import { US, ES, AL } from 'country-flag-icons/react/3x2';
+import { US, DO, AL } from 'country-flag-icons/react/3x2';
 
 interface LanguageDropdownProps {
   selectedLanguage: Language;
@@ -33,7 +33,7 @@ export default function LanguageDropdown({
 
   useEffect(() => {
     if (selectedLanguage.code === 'es')
-      setSelectedLanguageIcon(<ES className="w-5" />);
+      setSelectedLanguageIcon(<DO className="w-5" />);
     else if (selectedLanguage.code === 'sq')
       setSelectedLanguageIcon(<AL className="w-5" />);
     else setSelectedLanguageIcon(<US className="w-5" />);
@@ -47,26 +47,6 @@ export default function LanguageDropdown({
 
   return (
     <div className="relative inline-block" ref={dropdownRef}>
-      {isOpen && (
-        <div className="sm:hidden absolute bottom-10 mt-1 w-full min-w-[100px] bg-white border border-gray-200 rounded-lg z-100 animate-fadeIn">
-          {languages.map((language) => (
-            <button
-              key={language.code}
-              onClick={() => handleLanguageSelect(language)}
-              className={`w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-150 ${
-                selectedLanguage.code === language.code
-                  ? 'bg-gray-100 '
-                  : 'text-gray-700'
-              }`}
-            >
-              <span className="text-sm">{language.name}</span>
-              {selectedLanguage.code === language.code && (
-                <span className="ml-auto text-gray-800">✓</span>
-              )}
-            </button>
-          ))}
-        </div>
-      )}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-20 flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -80,7 +60,7 @@ export default function LanguageDropdown({
       </button>
 
       {isOpen && (
-        <div className="hidden sm:block absolute mt-1 w-full min-w-[100px] bg-white border border-gray-200 rounded-lg z-100 animate-fadeIn">
+        <div className="block absolute mt-1 right-0.5 w-full min-w-[100px] bg-white border border-gray-200 rounded-lg z-100 animate-fadeIn">
           {languages.map((language) => (
             <button
               key={language.code}
