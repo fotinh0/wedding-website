@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
+import type { HomepageTranslationContent, Lang } from '../types';
 
-export default function WeddingCountdown() {
+export default function WeddingCountdown({
+  code,
+  translation,
+}: {
+  code: Lang;
+  translation: HomepageTranslationContent;
+}) {
   const [weddingDate] = useState(new Date('2026-08-01T18:00:00'));
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -53,24 +60,18 @@ export default function WeddingCountdown() {
         </div>
 
         <div className="flex items-center justify-center gap-4 md:gap-12 mb-8 mx-auto">
-          <TimeUnit value={timeLeft.days} label="DAYS" />
+          <TimeUnit value={timeLeft.days} label={translation.days} />
           <div className="text-3xl text-black font-light">:</div>
-          <TimeUnit value={timeLeft.hours} label="HOURS" />
+          <TimeUnit value={timeLeft.hours} label={translation.hours} />
           <div className="text-3xl text-black font-light">:</div>
-          <TimeUnit value={timeLeft.minutes} label="MINUTES" />
+          <TimeUnit value={timeLeft.minutes} label={translation.minutes} />
           <div className="text-3xl text-black font-light">:</div>
-          <TimeUnit value={timeLeft.seconds} label="SECONDS" />
+          <TimeUnit value={timeLeft.seconds} label={translation.seconds} />
         </div>
 
         <div className="text-center">
           <div className="text-sm uppercase tracking-widest text-gray-500">
-            {weddingDate
-              .toLocaleDateString('en-US', {
-                month: '2-digit',
-                day: '2-digit',
-                year: '2-digit',
-              })
-              .replace(/\//g, '/')}
+            {code === 'sq' ? '01/08/26' : '08/01/2026'}
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 // translations.ts
-export const homepageTranslations = {
+const homepageTranslations = {
   en: {
+    overlay: "We're getting married",
     welcome:
       "Welcome to our wedding website! We hope this site serves as a helpful guide as you prepare to join us for our special day. We feel incredibly lucky to be surrounded by such wonderful friends and family, and we're so grateful to celebrate this milestone with you.",
     details:
@@ -12,9 +13,16 @@ export const homepageTranslations = {
     proposal: 'The Proposal',
     proposalText:
       'During our summer trip to Albania, her first time visiting and meeting my family, she thought we were just going to dinner. Instead, I led her to a private oceanview setup with flowers overlooking the water. As the sun set and the waves whispered below, I asked her to marry me — what she thought would be a simple dinner turned into a night we’ll remember forever.',
-    saveTheDate: 'Save the date — August 1, 2026',
+    date: 'August 1, 2026',
+    date2: '08/01/26',
+    saveTheDateText: 'Save the date — August 1, 2026',
+    days: 'DAYS',
+    hours: 'HOURS',
+    minutes: 'MINUTES',
+    seconds: 'SECONDS',
   },
   es: {
+    overlay: 'Nos vamos a casar',
     welcome:
       '¡Bienvenidos a nuestro sitio web de bodas! Esperamos que este sitio sirva como una guía útil mientras se preparan para unirse a nosotros en nuestro día especial. Nos sentimos increíblemente afortunados de estar rodeados de amigos y familiares tan maravillosos y estamos muy agradecidos de celebrar este logro con ustedes.',
     details:
@@ -26,13 +34,20 @@ export const homepageTranslations = {
     proposal: 'El Compromiso',
     proposalText:
       'Durante nuestro viaje de verano a Albania, su primera vez visitando y conociendo a mi familia, pensó que solo íbamos a cenar. En cambio, la llevé a un lugar privado frente al mar con flores mirando el agua. Mientras el sol se ponía y las olas susurraban abajo, le pedí que se casara conmigo; lo que ella pensó que sería una cena simple se convirtió en una noche que recordaremos para siempre.',
-    saveTheDate: 'Reserva la fecha — 1 de agosto de 2026',
+    date: '1 de agosto de 2026',
+    date2: '08/01/26',
+    saveTheDateText: 'Reserva la fecha — 1 de agosto de 2026',
+    days: 'DIAS',
+    hours: 'HORAS',
+    minutes: 'MINUTOS',
+    seconds: 'SEGUNDOS',
   },
   sq: {
+    overlay: 'Ne do të martohemi',
     welcome:
       'Mirësevini në faqen tonë të dasmës! Shpresojmë që kjo faqe t’ju shërbejë si një udhëzues i dobishëm ndërsa përgatiteni të na bashkoheni në ditën tonë të veçantë. Ndihemi jashtëzakonisht të lumtur që jemi të rrethuar nga miq dhe familje kaq të mrekullueshëm dhe jemi shumë mirënjohës që po festojmë këtë moment me ju.',
     details:
-      'Detajet janë ende duke u finalizuar, dhe ne do të vazhdojmë të përditësojmë këtë faqe ndërsa planet bëhen realitet. Ftesat formale do të dërgohen në fillim të vitit 2026.',
+      'Detajet janë ende duke u finalizuar, dhe ne do të vazhdojmë të përditësojmë këtë faqe. Ftesat formale do të dërgohen në fillim të vitit 2026.',
     story: 'Historia jonë',
     howWeMet: 'Si u takuam',
     howWeMetText:
@@ -40,6 +55,14 @@ export const homepageTranslations = {
     proposal: 'Propozimi',
     proposalText:
       'Gjatë udhëtimit tonë veror në Shqipëri, hera e saj e parë duke vizituar dhe duke takuar familjen time, ajo mendoi se do të dilnim vetëm për darkë. Në vend të kësaj, e çova në një vend privat me pamje nga deti dhe me lule. Ndërsa dielli perëndonte dhe valët pëshpëritnin poshtë, e pyeta në martesë — ajo që mendoi se do të ishte një darkë e thjeshtë u bë në një natë që do ta kujtojmë përgjithmonë.',
-    saveTheDate: 'Ruani datën — 1 gusht 2026',
+    date: '1 Gusht 2026',
+    date2: '01/08/26',
+    saveTheDateText: 'Ruani datën — 1 gusht 2026',
+    days: 'DITE',
+    hours: 'ORE',
+    minutes: 'MINUTA',
+    seconds: 'SEKONDA',
   },
 };
+
+export default homepageTranslations;

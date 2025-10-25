@@ -1,25 +1,38 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import type { Lang, NavigationItem } from '../types';
+import type { Language, NavigationItem } from '../types';
+import LanguageDropdown from './LanguageDropdown';
+import { createPortal } from 'react-dom';
 
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
   items: NavigationItem[];
-  currentLang: Lang;
-  setCurrentLang: (lang: Lang) => void;
+  selectedLanguage: Language;
+  setSelectedLanguage: (language: Language) => void;
 }
 
 export default function Navigation({
   currentPage,
   onNavigate,
   items,
+  selectedLanguage,
+  setSelectedLanguage,
 }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="w-full z-50 bg-white/98 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 pt-2 sm:px-6 lg:px-8">
+        {createPortal(
+          <div className="hidden md:block absolute top-2 right-4 sm:top-4 sm:right-10 z-50">
+            <LanguageDropdown
+              selectedLanguage={selectedLanguage}
+              setSelectedLanguage={setSelectedLanguage}
+            />
+          </div>,
+          document.body
+        )}
         <div className="flex justify-between gap-4 items-center h-30 sm:h-35 md:flex-col md:justify-normal">
           <h1
             onClick={() => onNavigate('home')}
@@ -70,6 +83,12 @@ export default function Navigation({
                 {item.name}
               </button>
             ))}
+            <div className="border-t border-gray-100 px-4 pt-4 flex z-60">
+              <LanguageDropdown
+                selectedLanguage={selectedLanguage}
+                setSelectedLanguage={setSelectedLanguage}
+              />
+            </div>
           </div>
         </div>
       )}

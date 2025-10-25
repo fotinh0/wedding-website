@@ -1,7 +1,36 @@
 import happiness from '../assets/happiness.png';
 import happinessMobile from '../assets/happinessMini.png';
+import scheduleTranslations from '../translations/schedule';
+import type { Language } from '../types';
 
-export default function SchedulePage() {
+export default function SchedulePage({ language }: { language: Language }) {
+  const t = scheduleTranslations[language.code];
+
+  const ceremonyText = () => {
+    if (language.code === 'es')
+      return (
+        <p className="text-lg leading-relaxed">
+          La ceremonia tendrá lugar en{' '}
+          <span className="font-bold">Zoe Hora</span> en Dhërmi, Albania.
+        </p>
+      );
+
+    if (language.code === 'sq')
+      return (
+        <p className="text-lg leading-relaxed">
+          Ceremonia do të zhvillohet në{' '}
+          <span className="font-bold">Zoe Hora</span> në Dhërmi, Albania.
+        </p>
+      );
+
+    return (
+      <p className="text-lg leading-relaxed">
+        The ceremony will take place at{' '}
+        <span className="font-bold">Zoe Hora</span> in Dhërmi, Albania.
+      </p>
+    );
+  };
+
   return (
     <div className="mx-auto">
       <img
@@ -16,12 +45,8 @@ export default function SchedulePage() {
       />
       <div className="max-w-5xl mx-auto text-center px-4 my-16 sm:my-24">
         <div className="flex flex-col justify-center">
-          <p className="text-[40px] sm:text-6xl mb-8 italic">Wedding Day</p>
-          <p className="tracking-wide font-light">
-            We can't wait to celebrate with you! Below is a glimpse of the
-            events for our special day. Details are still being finalized, so
-            please check back here for updates as the plans come together.
-          </p>
+          <p className="text-[40px] sm:text-6xl mb-8 italic">{t.title}</p>
+          <p className="tracking-wide font-light">{t.intro}</p>
         </div>
       </div>
 
@@ -29,37 +54,27 @@ export default function SchedulePage() {
         <div className="max-w-5xl mx-auto py-8">
           <div className="relative flex flex-col sm:flex-row items-center">
             <div className="sm:w-2/5 p-8 flex justify-end text-center">
-              <h3 className="text-3xl italic">Ceremony</h3>
+              <h3 className="text-3xl italic">{t.ceremonyTitle}</h3>
             </div>
             <div className="sm:w-3/5 pt-0 pb-8 px-8 sm:pb-10 sm:pt-8 text-center sm:text-left sm:border-l">
-              <p className="text-lg leading-relaxed">
-                The ceremony will take place at{' '}
-                <span className="font-bold">Zoe Hora</span> in Dhërmi, Albania.
-              </p>
+              {ceremonyText()}
             </div>
           </div>
           <div className="relative flex flex-col sm:flex-row">
             <div className="sm:w-2/5 p-8 flex items-center text-center justify-end">
-              <h3 className="text-3xl italic">Reception & Celebration</h3>
+              <h3 className="text-3xl italic">{t.receptionTitle}</h3>
             </div>
             <div className="sm:w-3/5 pt-0 pb-8 px-8 sm:pb-10 sm:pt-8 text-center sm:text-left sm:border-l">
-              <p className="text-lg leading-relaxed">
-                Dinner, drinks, and dancing will follow the ceremony. We’ll
-                share more details here once everything is finalized. Come ready
-                to eat, toast, and dance the night away with us!
-              </p>
+              <p className="text-lg leading-relaxed">{t.receptionText}</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center">
             <div className="sm:w-2/5 p-8 flex items-center justify-end text-center">
-              <h3 className="text-3xl italic">Other Events</h3>
+              <h3 className="text-3xl italic">{t.otherEventsTitle}</h3>
             </div>
 
             <div className="sm:w-3/5 pt-0 pb-8 px-8 sm:pb-10 sm:pt-8 text-center sm:text-left sm:border-l">
-              <p className="text-lg leading-relaxed">
-                We may host a welcome party or other gatherings around the
-                wedding. Details for these events will be shared here soon.
-              </p>
+              <p className="text-lg leading-relaxed">{t.otherEventsText}</p>
             </div>
           </div>
         </div>
