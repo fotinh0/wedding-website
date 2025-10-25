@@ -19,7 +19,7 @@ export default function WeddingCountdown({
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      const difference = weddingDate - now;
+      const difference = weddingDate.getTime() - now.getTime();
 
       if (difference > 0) {
         setTimeLeft({
