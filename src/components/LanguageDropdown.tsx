@@ -15,7 +15,28 @@ export default function LanguageDropdown({
 }: LanguageDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [selectedLanguageIcon, setSelectedLanguageIcon] = useState(<US />);
+  const [selectedLanguageIcon, setSelectedLanguageIcon] = useState(
+    <US className="w-5" />
+  );
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const langParam = params.get('lang');
+
+    if (langParam) {
+      const foundLang = languages.find(
+        (lang) => lang.code.toLowerCase() === langParam.toLowerCase()
+      );
+      if (foundLang) {
+        setSelectedLanguage(foundLang);
+        if (foundLang.code === 'es')
+          setSelectedLanguageIcon(<DO className="w-5" />);
+        else if (foundLang.code === 'sq')
+          setSelectedLanguageIcon(<AL className="w-5" />);
+        else setSelectedLanguageIcon(<US className="w-5" />);
+      }
+    }
+  }, [setSelectedLanguage]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
