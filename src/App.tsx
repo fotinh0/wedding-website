@@ -16,6 +16,20 @@ const englishNavigationItems = [
   { name: "FAQs", href: "faqs" },
 ];
 
+const albanianNavigationItems = [
+  { name: "Shtëpia", href: "home" },
+  { name: "Programi", href: "schedule" },
+  { name: "Udhëtimi", href: "travel" },
+  { name: "Pyetje të Bëra Shpesh", href: "faqs" },
+];
+
+const spanishNavigationItems = [
+  { name: "Inicio", href: "home" },
+  { name: "Agenda", href: "schedule" },
+  { name: "Viaje", href: "travel" },
+  { name: "Preguntas Frecuentes", href: "faqs" },
+];
+
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(
@@ -27,21 +41,19 @@ function App() {
 
   useEffect(() => {
     if (selectedLanguage.code === "sq") {
-      setNavigationItems([
-        { name: "Shtëpia", href: "home" },
-        { name: "Programi", href: "schedule" },
-        { name: "Udhëtimi", href: "travel" },
-        { name: "Pyetje të Bëra Shpesh", href: "faqs" },
-      ]);
+      setNavigationItems(albanianNavigationItems);
     } else if (selectedLanguage.code === "es") {
-      setNavigationItems([
-        { name: "Inicio", href: "home" },
-        { name: "Agenda", href: "schedule" },
-        { name: "Viaje", href: "travel" },
-        { name: "Preguntas Frecuentes", href: "faqs" },
-      ]);
+      setNavigationItems(spanishNavigationItems);
     } else setNavigationItems(englishNavigationItems);
   }, [selectedLanguage.code]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get("page");
+    if (pageParam) {
+      setCurrentPage(pageParam);
+    }
+  }, []);
 
   const handleNavigate = (page: string) => {
     setCurrentPage(page);
@@ -51,7 +63,6 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        // return <HomePage onNavigate={handleNavigate} />;
         return <HomePage language={selectedLanguage} />;
       case "schedule":
         return <SchedulePage language={selectedLanguage} />;
