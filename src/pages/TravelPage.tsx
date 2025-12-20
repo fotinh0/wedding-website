@@ -222,7 +222,7 @@ export default function TravelPage({
             (evento de bienvenida) y 1 de agosto (día de la boda). Para más
             detalles sobre cada evento, por favor visita la página{" "}
             <span
-              className="italic cursor-pointer hover:underline"
+              className="italic cursor-pointer underline"
               onClick={() => handleNavigation("schedule")}
             >
               Agenda
@@ -264,7 +264,7 @@ export default function TravelPage({
             — 31 korrik (eventi i mirëseardhjes) dhe 1 gusht (dita e dasmës).
             Për më shumë detaje mbi secilin event, ju lutemi vizitoni faqen{" "}
             <span
-              className="italic cursor-pointer hover:underline"
+              className="italic cursor-pointer underline"
               onClick={() => handleNavigation("schedule")}
             >
               Programi
@@ -300,7 +300,7 @@ export default function TravelPage({
           (welcome event) and August 1 (wedding day). For more details on each
           event, please visit the{" "}
           <span
-            className="italic cursor-pointer hover:underline"
+            className="italic cursor-pointer underline"
             onClick={() => handleNavigation("schedule")}
           >
             Schedule
