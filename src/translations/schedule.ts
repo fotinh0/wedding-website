@@ -1,45 +1,48 @@
 export const scheduleTranslations = {
   en: {
-    title: 'Wedding Day',
+    title: "Wedding Weekend Schedule",
     intro:
-      "We can't wait to celebrate with you! Below is a glimpse of the events for our special day. Details are still being finalized, so please check back here for updates as the plans come together.",
-    ceremonyTitle: 'Ceremony',
+      "We can’t wait to celebrate with you. Below is a look at the events surrounding our wedding weekend. Details will continue to be updated as plans are finalized.",
+    welcomeEventTitle: "Welcome Event",
+    welcomeEventDate: "July 31st, 2026",
+    weddingDayTitle: "Wedding Day",
+    weddingDayDate: "August 1st, 2026",
+    ceremonyTitle: "Ceremony",
     ceremonyText:
-      'The ceremony will take place at Zoe Hora in Dhërmi, Albania.',
-    receptionTitle: 'Reception & Celebration',
+      "The ceremony will take place at Zoe Hora in Dhërmi, Albania.",
+    receptionTitle: "Reception & Celebration",
     receptionText:
-      'Dinner, drinks, and dancing will follow the ceremony. We’ll share more details here once everything is finalized. Come ready to eat, toast, and dance the night away with us!',
-    otherEventsTitle: 'Other Events',
-    otherEventsText:
-      'We may host a welcome party or other gatherings around the wedding. Details for these events will be shared here soon.',
+      "Dinner, drinks, and dancing will follow the ceremony. We’ll share more details here once everything is finalized. Come ready to eat, toast, and dance the night away with us!",
   },
 
   sq: {
-    title: 'Dita e Dasmës',
+    title: "Fundjava e Dasmës",
     intro:
-      'Nuk mund të presim të festojmë me ju! Më poshtë është një përmbledhje e ngjarjeve për ditën tonë të veçantë. Detajet janë ende duke u finalizuar, prandaj ju lutemi kontrolloni përsëri këtu për përditësime ndërsa planet përfundojnë.',
-    ceremonyTitle: 'Ceremonia',
-    ceremonyText: 'Ceremonia do të zhvillohet në Zoe Hora në Dhërmi, Shqipëri.',
-    receptionTitle: 'Darka dhe Festa',
+      "Me padurim presim të festojmë me ju. Më poshtë do të gjeni një pasqyrë të eventeve që rrethojnë fundjavën e dasmës sonë. Detajet do të përditësohen vazhdimisht ndërsa planet finalizohen.",
+    welcomeEventTitle: "Event Mirëseardhjeje",
+    welcomeEventDate: "31 Korrik 2026",
+    weddingDayTitle: "Dita e Dasmës",
+    weddingDayDate: "1 Gusht 2026",
+    ceremonyTitle: "Ceremonia",
+    ceremonyText: "Ceremonia do të zhvillohet në Zoe Hora në Dhërmi, Shqipëri.",
+    receptionTitle: "Darka dhe Festa",
     receptionText:
-      'Pas ceremonisë do të ketë darkë, pije dhe kërcim. Do të ndajmë më shumë detaje këtu sapo gjithçka të finalizohet. Ejani gati për të ngrënë, për të ngritur dolli dhe për të kërcyer gjithë natën me ne!',
-    otherEventsTitle: 'Ngjarje të Tjera',
-    otherEventsText:
-      'Mund të organizojmë një festë mirëseardhjeje ose mbledhje të tjera përreth dasmës. Detajet për këto ngjarje do të ndahen së shpejti këtu.',
+      "Pas ceremonisë do të ketë darkë, pije dhe kërcim. Do të ndajmë më shumë detaje këtu sapo gjithçka të finalizohet. Ejani gati për të ngrënë, për të ngritur dolli dhe për të kërcyer gjithë natën me ne!",
   },
 
   es: {
-    title: 'Día de la Boda',
+    title: "Fin de Semana de la Boda",
     intro:
-      '¡No podemos esperar para celebrar contigo! A continuación encontrarás un vistazo a los eventos de nuestro día especial. Los detalles aún se están finalizando, así que vuelve pronto para ver las actualizaciones.',
-    ceremonyTitle: 'Ceremonia',
-    ceremonyText: 'La ceremonia tendrá lugar en Zoe Hora en Dhërmi, Albania.',
-    receptionTitle: 'Recepción y Celebración',
+      "¡No podemos esperar para celebrar contigo! A continuación encontrarás un vistazo a los eventos de nuestro fin de semana de boda. Los detalles se seguirán actualizando a medida que se finalicen los planes.",
+    welcomeEventTitle: "Evento de Bienvenida",
+    welcomeEventDate: "31 de julio de 2026",
+    weddingDayTitle: "Día de la Boda",
+    weddingDayDate: "1 de agosto de 2026",
+    ceremonyTitle: "Ceremonia",
+    ceremonyText: "La ceremonia tendrá lugar en Zoe Hora en Dhërmi, Albania.",
+    receptionTitle: "Recepción y Celebración",
     receptionText:
-      'La cena, las bebidas y el baile seguirán a la ceremonia. Compartiremos más detalles aquí una vez que todo esté finalizado. ¡Ven preparado para comer, brindar y bailar toda la noche con nosotros!',
-    otherEventsTitle: 'Otros Eventos',
-    otherEventsText:
-      'Podríamos organizar una fiesta de bienvenida u otros eventos alrededor de la boda. Los detalles se compartirán aquí pronto.',
+      "La cena, las bebidas y el baile seguirán a la ceremonia. Compartiremos más detalles aquí una vez que todo esté finalizado. ¡Ven preparado para comer, brindar y bailar toda la noche con nosotros!",
   },
 };
 

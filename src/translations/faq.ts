@@ -1,140 +1,140 @@
 const faqTranslations = {
   en: {
-    title: 'Frequently Asked Questions',
-    subtitle: 'Everything you need to know about our special day',
+    title: "Frequently Asked Questions",
+    subtitle: "Everything you need to know about our special day",
     faqs: [
       {
-        question: 'What should I wear?',
+        question: "What should I wear?",
         answer:
-          'We’ll be sharing more details on attire soon but guests can expect a formal dress code. A style guide with example looks will also be added to this site to help you plan — stay tuned!',
+          "Guests can expect a formal dress code. We’ll be sharing a style guide with example looks closer to the date to help you plan.",
       },
       {
-        question: 'When will invitations be sent?',
+        question: "When will invitations be sent?",
         answer:
-          'Formal invitations will be sent out in early 2026, with all the details you’ll need to join us for our special day.',
+          "Formal invitations will be sent in early 2026 with all the details for our wedding weekend.",
       },
       {
-        question: 'When should I RSVP?',
+        question: "When should I RSVP?",
         answer:
-          'RSVP instructions will be included with your invitation. For now, please save the date and start getting excited — we can’t wait to celebrate with you!',
+          "RSVP instructions will be included with your invitation. For now, please save the date and start getting excited — we can’t wait to celebrate with you!",
       },
       {
-        question: 'Can I bring a guest?',
+        question: "Can I bring a guest?",
         answer:
-          'Your invitation will indicate if you have a plus-one. If you’re unsure, please don’t hesitate to reach out — we’ll be happy to confirm for you.',
+          "As we are hosting a small, intimate wedding, attendance is limited. Your invitation will indicate if a plus-one is included. If you’re unsure, please feel free to reach out.",
       },
       {
-        question: 'How should I book my hotel room?',
+        question: "How should I book my hotel room?",
         answer:
-          'We’ll be sharing more details soon about our discounted rates at Zoe Hora, along with nearby hotel recommendations. Once finalized, we’ll update this page and send a text with booking information. Guests staying at Zoe Hora will need to contact the hotel directly to secure their reservation, and we’ll let you know once our group rate is available.',
+          "Guests staying at Zoe Hora will need to contact the hotel directly to secure their reservation. Detailed booking instructions, along with our special wedding rates and nearby accommodation options, are available on the Travel & Accommodations page.",
       },
       {
-        question: 'Are children invited?',
+        question: "Are children invited?",
         answer:
-          'While we love your little ones, our wedding will be an adults-only celebration. We hope you can enjoy this getaway and celebration with us!',
+          "While we love your little ones, our wedding will be an adults-only celebration. We hope you can enjoy this getaway and celebration with us!",
       },
       {
-        question: 'Do you have a registry?',
+        question: "Do you have a registry?",
         answer:
-          'We won’t have a traditional registry, but your love and presence mean the world to us. For those who wish to contribute, we welcome gifts toward our honeymoon fund as we begin this next chapter together.',
+          "We won’t have a traditional registry, but your love and presence mean the world to us. For those who wish to contribute, we welcome gifts toward our honeymoon fund as we begin this next chapter together.",
       },
     ],
-    stillHaveQuestions: 'Still Have Questions?',
+    stillHaveQuestions: "Still Have Questions?",
     contactText:
       "If you have any other questions or concerns, please don't hesitate to reach out to us directly.",
-    contactButton: 'Contact Us',
+    contactButton: "Contact Us",
   },
 
   sq: {
-    title: 'Pyetje të Bëra Shpesh',
-    subtitle: 'Gjithçka që duhet të dini për ditën tonë të veçantë',
+    title: "Pyetje të Bëra Shpesh",
+    subtitle: "Gjithçka që duhet të dini për ditën tonë të veçantë",
     faqs: [
       {
-        question: 'Çfarë duhet të vesh?',
+        question: "Çfarë duhet të vesh?",
         answer:
-          'Së shpejti do të ndajmë më shumë detaje për kodin e veshjes, por mysafirët mund të presin një veshje formale. Një udhëzues stili me shembuj do të shtohet gjithashtu në këtë faqe — qëndroni në pritje!',
+          "Të ftuarit mund të presin një kod veshjeje formal. Do të ndajmë një udhëzues stili me shembuj veshjesh më afër datës, për t’ju ndihmuar në planifikim.",
       },
       {
-        question: 'Kur do të dërgohen ftesat?',
+        question: "Kur do të dërgohen ftesat?",
         answer:
-          'Ftesat formale do të dërgohen në fillim të vitit 2026, me të gjitha detajet që do t’ju nevojiten për t’u bashkuar me ne në ditën tonë të veçantë.',
+          "Ftesat formale do të dërgohen në fillim të vitit 2026 me të gjitha detajet e fundjavës së dasmës sonë",
       },
       {
-        question: 'Kur duhet të bëj RSVP?',
+        question: "Kur duhet të bëj RSVP?",
         answer:
-          'Udhëzimet për RSVP do të përfshihen në ftesën tuaj. Për momentin, ju lutemi ruani datën dhe filloni të emocionoheni — mezi presim të festojmë me ju!',
+          "Udhëzimet për RSVP do të përfshihen në ftesën tuaj. Për momentin, ju lutemi ruani datën dhe filloni të emocionoheni — mezi presim të festojmë me ju!",
       },
       {
-        question: 'A mund të sjell një të ftuar?',
+        question: "A mund të sjell një të ftuar?",
         answer:
-          'Ftesa juaj do të tregojë nëse keni një plus-one. Nëse nuk jeni të sigurt, mos hezitoni të na kontaktoni — do të jemi të lumtur t’ju konfirmojmë.',
+          "Meqenëse po organizojmë një dasmë të vogël dhe intime, pjesëmarrja është e kufizuar. Ftesa juaj do të tregojë nëse përfshihet një person shoqërues. Nëse nuk jeni të sigurt, ju lutemi mos hezitoni të na kontaktoni.",
       },
       {
-        question: 'Si mund të rezervoj dhomën e hotelit?',
+        question: "Si mund të rezervoj dhomën e hotelit?",
         answer:
-          'Së shpejti do të ndajmë më shumë detaje për çmimet tona të zbritura në Zoe Hora, si dhe rekomandime për hotele afër. Pasi të finalizohet gjithçka, do ta përditësojmë këtë faqe dhe do të dërgojmë një mesazh me informacionin e rezervimit. Mysafirët që qëndrojnë në Zoe Hora duhet të kontaktojnë drejtpërdrejt me hotelin për të siguruar rezervimin, dhe ne do t’ju njoftojmë sapo të jetë e disponueshme tarifa jonë e grupit.',
+          "Të ftuarit që do të qëndrojnë në Zoe Hora duhet të kontaktojnë drejtpërdrejt hotelin për të siguruar rezervimin. Udhëzime të detajuara për rezervimin, së bashku me çmimet tona speciale të dasmës dhe opsionet e akomodimit në afërsi, janë të disponueshme në faqen Udhëtimi dhe Akomodimet.",
       },
       {
-        question: 'A janë fëmijët të ftuar?',
+        question: "A janë fëmijët të ftuar?",
         answer:
-          'Edhe pse i duam të vegjlit tuaj, dasma jonë do të jetë një festë vetëm për të rritur. Shpresojmë të shijoni këtë udhëtim dhe festë me ne!',
+          "Edhe pse i duam të vegjlit tuaj, dasma jonë do të jetë një festë vetëm për të rritur. Shpresojmë të shijoni këtë udhëtim dhe festë me ne!",
       },
       {
-        question: 'A keni një regjistër dhuratash?',
+        question: "A keni një regjistër dhuratash?",
         answer:
-          'Nuk do të kemi një regjistër tradicional, por dashuria dhe prania juaj kanë shumë rëndësi për ne. Për ata që dëshirojnë të kontribuojnë, mirëpresim dhurata për fondin e udhëtimit tonë të muajit të mjaltit ndërsa fillojmë këtë kapitull të ri bashkë.',
+          "Nuk do të kemi një regjistër tradicional, por dashuria dhe prania juaj kanë shumë rëndësi për ne. Për ata që dëshirojnë të kontribuojnë, mirëpresim dhurata për fondin e udhëtimit tonë të muajit të mjaltit ndërsa fillojmë këtë kapitull të ri bashkë.",
       },
     ],
-    stillHaveQuestions: 'Keni ende pyetje?',
+    stillHaveQuestions: "Keni ende pyetje?",
     contactText:
-      'Nëse keni ndonjë pyetje ose shqetësim tjetër, mos hezitoni të na kontaktoni drejtpërdrejt.',
-    contactButton: 'Na Kontaktoni',
+      "Nëse keni ndonjë pyetje ose shqetësim tjetër, mos hezitoni të na kontaktoni drejtpërdrejt.",
+    contactButton: "Na Kontaktoni",
   },
 
   es: {
-    title: 'Preguntas Frecuentes',
-    subtitle: 'Todo lo que necesitas saber sobre nuestro gran día',
+    title: "Preguntas Frecuentes",
+    subtitle: "Todo lo que necesitas saber sobre nuestro gran día",
     faqs: [
       {
-        question: '¿Qué debo usar?',
+        question: "¿Qué debo usar?",
         answer:
-          'Pronto compartiremos más detalles sobre el código de vestimenta, pero los invitados pueden esperar una vestimenta formal. También agregaremos una guía de estilo con ejemplos en este sitio — ¡mantente atento!',
+          "Los invitados pueden esperar un código de vestimenta formal. Compartiremos una guía de estilo con ejemplos de looks más cerca de la fecha para ayudarte a planificar.",
       },
       {
-        question: '¿Cuándo se enviarán las invitaciones?',
+        question: "¿Cuándo se enviarán las invitaciones?",
         answer:
-          'Las invitaciones formales se enviarán a principios de 2026, con todos los detalles que necesitarás para acompañarnos en nuestro día especial.',
+          "Las invitaciones formales se enviarán a principios de 2026 con todos los detalles de nuestro fin de semana de boda.",
       },
       {
-        question: '¿Cuándo debo confirmar mi asistencia (RSVP)?',
+        question: "¿Cuándo debo confirmar mi asistencia (RSVP)?",
         answer:
-          'Las instrucciones para RSVP se incluirán con tu invitación. Por ahora, guarda la fecha y empieza a emocionarte — ¡no podemos esperar para celebrar contigo!',
+          "Las instrucciones para RSVP se incluirán con tu invitación. Por ahora, guarda la fecha y empieza a emocionarte — ¡no podemos esperar para celebrar contigo!",
       },
       {
-        question: '¿Puedo llevar un acompañante?',
+        question: "¿Puedo llevar un acompañante?",
         answer:
-          'Tu invitación indicará si tienes un acompañante. Si no estás seguro, no dudes en comunicarte con nosotros — estaremos encantados de confirmarlo por ti.',
+          "Como estamos organizando una boda pequeña e íntima, la asistencia es limitada. Tu invitación indicará si incluye acompañante. Si tienes alguna duda, no dudes en ponerte en contacto con nosotros.",
       },
       {
-        question: '¿Cómo debo reservar mi habitación de hotel?',
+        question: "¿Cómo debo reservar mi habitación de hotel?",
         answer:
-          'Pronto compartiremos más detalles sobre nuestras tarifas con descuento en Zoe Hora, junto con recomendaciones de hoteles cercanos. Una vez finalizado, actualizaremos esta página y enviaremos un mensaje con la información de reserva. Los invitados que se alojen en Zoe Hora deberán comunicarse directamente con el hotel para asegurar su reserva, y les informaremos una vez que esté disponible nuestra tarifa de grupo.',
+          "Los invitados que se alojen en Zoe Hora deberán contactar directamente con el hotel para asegurar su reserva. Las instrucciones detalladas de reserva, junto con nuestras tarifas especiales de boda y las opciones de alojamiento cercanas, están disponibles en la página de Viaje y Alojamiento.",
       },
       {
-        question: '¿Se permiten niños?',
+        question: "¿Se permiten niños?",
         answer:
-          'Aunque amamos a tus pequeños, nuestra boda será una celebración solo para adultos. ¡Esperamos que disfrutes esta escapada y celebración con nosotros!',
+          "Aunque amamos a tus pequeños, nuestra boda será una celebración solo para adultos. ¡Esperamos que disfrutes esta escapada y celebración con nosotros!",
       },
       {
-        question: '¿Tienen lista de regalos?',
+        question: "¿Tienen lista de regalos?",
         answer:
-          'No tendremos una lista de regalos tradicional, pero tu amor y presencia significan el mundo para nosotros. Para quienes deseen contribuir, aceptamos regalos para nuestro fondo de luna de miel mientras comenzamos este nuevo capítulo juntos.',
+          "No tendremos una lista de regalos tradicional, pero tu amor y presencia significan el mundo para nosotros. Para quienes deseen contribuir, aceptamos regalos para nuestro fondo de luna de miel mientras comenzamos este nuevo capítulo juntos.",
       },
     ],
-    stillHaveQuestions: '¿Aún tienes preguntas?',
+    stillHaveQuestions: "¿Aún tienes preguntas?",
     contactText:
-      'Si tienes alguna otra pregunta o inquietud, no dudes en comunicarte directamente con nosotros.',
-    contactButton: 'Contáctanos',
+      "Si tienes alguna otra pregunta o inquietud, no dudes en comunicarte directamente con nosotros.",
+    contactButton: "Contáctanos",
   },
 };
 
