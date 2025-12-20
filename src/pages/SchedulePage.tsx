@@ -32,7 +32,6 @@ export default function SchedulePage({ language }: { language: Language }) {
   };
 
   const welcomeEventText = () => {
-    // TODO
     if (language.code === "es") {
       return (
         <div className="flex flex-col gap-4">

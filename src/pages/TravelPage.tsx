@@ -3,11 +3,16 @@ import travelCollage from "../assets/travelCollage.png";
 import type { Language } from "../types";
 import travelTranslations from "../translations/travel";
 
-export default function TravelPage({ language }: { language: Language }) {
+export default function TravelPage({
+  language,
+  handleNavigation,
+}: {
+  language: Language;
+  handleNavigation: (page: string) => void;
+}) {
   const t = travelTranslations[language.code];
 
   const introText = () => {
-    // TODO: update
     if (language.code === "es")
       return (
         <p className="text-lg font-light md:w-3xl mx-auto">
@@ -188,7 +193,6 @@ export default function TravelPage({ language }: { language: Language }) {
   };
 
   const bookingText = () => {
-    // TODO
     if (language.code === "es") {
       return (
         <div className="flex flex-col gap-6">
@@ -215,9 +219,16 @@ export default function TravelPage({ language }: { language: Language }) {
           <p>
             Recomendamos hospedarse{" "}
             <span className="font-bold">al menos dos noches</span> — 31 de julio
-            (evento de bienvenida) y 1 de agosto (día de la boda). Recomendamos
-            especialmente quedarse la noche de la boda, ya que las celebraciones
-            se extenderán hasta tarde.
+            (evento de bienvenida) y 1 de agosto (día de la boda). Para más
+            detalles sobre cada evento, por favor visita la página{" "}
+            <span
+              className="italic cursor-pointer hover:underline"
+              onClick={() => handleNavigation("schedule")}
+            >
+              Agenda
+            </span>
+            . Recomendamos especialmente quedarse la noche de la boda, ya que
+            las celebraciones se extenderán hasta tarde.
           </p>
         </div>
       );
@@ -251,8 +262,15 @@ export default function TravelPage({ language }: { language: Language }) {
               Rekomandojmë të qëndroni të paktën dy netë
             </span>{" "}
             — 31 korrik (eventi i mirëseardhjes) dhe 1 gusht (dita e dasmës).
-            Veçanërisht rekomandojmë qëndrimin natën e dasmës, pasi festimet do
-            të zgjasin deri vonë.
+            Për më shumë detaje mbi secilin event, ju lutemi vizitoni faqen{" "}
+            <span
+              className="italic cursor-pointer hover:underline"
+              onClick={() => handleNavigation("schedule")}
+            >
+              Programi
+            </span>
+            . Veçanërisht rekomandojmë qëndrimin natën e dasmës, pasi festimet
+            do të zgjasin deri vonë.
           </p>
         </div>
       );
@@ -279,8 +297,16 @@ export default function TravelPage({ language }: { language: Language }) {
         <p>
           We recommend staying{" "}
           <span className="font-bold">at least two nights</span> — July 31
-          (welcome event) and August 1 (wedding day). We especially recommend
-          staying the night of the wedding, as celebrations will end late.
+          (welcome event) and August 1 (wedding day). For more details on each
+          event, please visit the{" "}
+          <span
+            className="italic cursor-pointer hover:underline"
+            onClick={() => handleNavigation("schedule")}
+          >
+            Schedule
+          </span>{" "}
+          page. We especially recommend staying the night of the wedding, as
+          celebrations will end late.
         </p>
       </div>
     );
