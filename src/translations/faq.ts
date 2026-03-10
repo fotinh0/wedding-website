@@ -6,7 +6,7 @@ const faqTranslations = {
       {
         question: "What should I wear?",
         answer:
-          "Our wedding will be black tie. We will be sharing a style guide with example looks in the coming weeks to help you plan.",
+          "Our wedding will be black tie. This does not mean all black attire - we will be sharing a style guide with example looks in the coming weeks to help you plan.",
       },
       {
         question: "When should I RSVP?",
