@@ -6,22 +6,17 @@ const faqTranslations = {
       {
         question: "What should I wear?",
         answer:
-          "Guests can expect a formal dress code. We’ll be sharing a style guide with example looks closer to the date to help you plan.",
-      },
-      {
-        question: "When will invitations be sent?",
-        answer:
-          "Formal invitations will be sent in early 2026 with all the details for our wedding weekend.",
+          "Our wedding will be black tie. We will be sharing a style guide with example looks in the coming weeks to help you plan.",
       },
       {
         question: "When should I RSVP?",
         answer:
-          "RSVP instructions will be included with your invitation. For now, please save the date and start getting excited — we can’t wait to celebrate with you!",
+          "Please confirm your attendance through the RSVP page on our website by June 1st, 2026.",
       },
       {
         question: "Can I bring a guest?",
         answer:
-          "As we are hosting a small, intimate wedding, attendance is limited. Your invitation will indicate if a plus-one is included. If you’re unsure, please feel free to reach out.",
+          "As we are hosting a small, intimate wedding, attendance is limited to the guests listed on your invitation. If you’re unsure, please feel free to reach out.",
       },
       {
         question: "How should I book my hotel room?",
@@ -46,7 +41,7 @@ const faqTranslations = {
   },
 
   sq: {
-    title: "Pyetje të Bëra Shpesh",
+    title: "Pyetje të Shpeshta",
     subtitle: "Gjithçka që duhet të dini për ditën tonë të veçantë",
     faqs: [
       {
@@ -55,19 +50,14 @@ const faqTranslations = {
           "Të ftuarit mund të presin një kod veshjeje formal. Do të ndajmë një udhëzues stili me shembuj veshjesh më afër datës, për t’ju ndihmuar në planifikim.",
       },
       {
-        question: "Kur do të dërgohen ftesat?",
-        answer:
-          "Ftesat formale do të dërgohen në fillim të vitit 2026 me të gjitha detajet e fundjavës së dasmës sonë",
-      },
-      {
         question: "Kur duhet të bëj RSVP?",
         answer:
-          "Udhëzimet për RSVP do të përfshihen në ftesën tuaj. Për momentin, ju lutemi ruani datën dhe filloni të emocionoheni — mezi presim të festojmë me ju!",
+          "Ju lutemi konfirmoni pjesëmarrjen tuaj përmes faqes së RSVP në faqen tonë të internetit deri më 1 qershor 2026.",
       },
       {
-        question: "A mund të sjell një të ftuar?",
+        question: "A mund të sjell një shoqërues?",
         answer:
-          "Meqenëse po organizojmë një dasmë të vogël dhe intime, pjesëmarrja është e kufizuar. Ftesa juaj do të tregojë nëse përfshihet një person shoqërues. Nëse nuk jeni të sigurt, ju lutemi mos hezitoni të na kontaktoni.",
+          "Meqenëse po organizojmë një dasmë të vogël dhe intime, pjesëmarrja është e kufizuar për të ftuarit e listuar në ftesën tuaj. Nëse nuk jeni të sigurt, mos hezitoni të na kontaktoni.",
       },
       {
         question: "Si mund të rezervoj dhomën e hotelit?",
@@ -87,7 +77,7 @@ const faqTranslations = {
     ],
     stillHaveQuestions: "Keni ende pyetje?",
     contactText:
-      "Nëse keni ndonjë pyetje ose shqetësim tjetër, mos hezitoni të na kontaktoni drejtpërdrejt.",
+      "Nëse keni ndonjë pyetje tjetër, mos hezitoni të na kontaktoni drejtpërdrejt.",
     contactButton: "Na Kontaktoni",
   },
 
@@ -98,22 +88,17 @@ const faqTranslations = {
       {
         question: "¿Qué debo usar?",
         answer:
-          "Los invitados pueden esperar un código de vestimenta formal. Compartiremos una guía de estilo con ejemplos de looks más cerca de la fecha para ayudarte a planificar.",
-      },
-      {
-        question: "¿Cuándo se enviarán las invitaciones?",
-        answer:
-          "Las invitaciones formales se enviarán a principios de 2026 con todos los detalles de nuestro fin de semana de boda.",
+          "Nuestra boda será de etiqueta (black tie). En las próximas semanas compartiremos una guía de estilo con ejemplos de looks para ayudarles a planificar.",
       },
       {
         question: "¿Cuándo debo confirmar mi asistencia (RSVP)?",
         answer:
-          "Las instrucciones para RSVP se incluirán con tu invitación. Por ahora, guarda la fecha y empieza a emocionarte — ¡no podemos esperar para celebrar contigo!",
+          "Por favor confirme su asistencia a través de la página de RSVP en nuestro sitio web antes del 1 de junio de 2026.",
       },
       {
         question: "¿Puedo llevar un acompañante?",
         answer:
-          "Como estamos organizando una boda pequeña e íntima, la asistencia es limitada. Tu invitación indicará si incluye acompañante. Si tienes alguna duda, no dudes en ponerte en contacto con nosotros.",
+          "Como estamos celebrando una boda pequeña e íntima, la asistencia está limitada a los invitados que aparecen en su invitación. Si tiene alguna duda, no dude en comunicarse con nosotros.",
       },
       {
         question: "¿Cómo debo reservar mi habitación de hotel?",

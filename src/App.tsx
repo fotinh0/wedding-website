@@ -8,35 +8,39 @@ import FAQPage from "./pages/FAQPage";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import languages from "./utils/languages";
+import RSVPPage from "./pages/RSVPPage";
 
 const englishNavigationItems = [
   { name: "Home", href: "home" },
   { name: "Schedule", href: "schedule" },
   { name: "Travel", href: "travel" },
+  { name: "RSVP", href: "rsvp" },
   { name: "FAQs", href: "faqs" },
 ];
 
 const albanianNavigationItems = [
-  { name: "Shtëpia", href: "home" },
+  { name: "Kryefaqja", href: "home" },
   { name: "Programi", href: "schedule" },
   { name: "Udhëtimi", href: "travel" },
-  { name: "Pyetje të Bëra Shpesh", href: "faqs" },
+  { name: "RSVP", href: "rsvp" },
+  { name: "Pyetje të Shpeshta", href: "faqs" },
 ];
 
 const spanishNavigationItems = [
   { name: "Inicio", href: "home" },
   { name: "Agenda", href: "schedule" },
   { name: "Viaje", href: "travel" },
+  { name: "RSVP", href: "rsvp" },
   { name: "Preguntas Frecuentes", href: "faqs" },
 ];
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(
-    languages[0]
+    languages[2],
   );
   const [navigationItems, setNavigationItems] = useState<NavigationItem[]>(
-    englishNavigationItems
+    englishNavigationItems,
   );
 
   useEffect(() => {
@@ -63,9 +67,19 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <HomePage language={selectedLanguage} />;
+        return (
+          <HomePage
+            language={selectedLanguage}
+            handleNavigation={handleNavigate}
+          />
+        );
       case "schedule":
-        return <SchedulePage language={selectedLanguage} />;
+        return (
+          <SchedulePage
+            language={selectedLanguage}
+            handleNavigation={handleNavigate}
+          />
+        );
       case "travel":
         return (
           <TravelPage
@@ -73,15 +87,22 @@ function App() {
             handleNavigation={handleNavigate}
           />
         );
+      case "rsvp":
+        return <RSVPPage language={selectedLanguage} />;
       case "faqs":
         return <FAQPage language={selectedLanguage} />;
       default:
-        return <HomePage language={selectedLanguage} />;
+        return (
+          <HomePage
+            language={selectedLanguage}
+            handleNavigation={handleNavigate}
+          />
+        );
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navigation
         currentPage={currentPage}
         onNavigate={handleNavigate}
@@ -89,7 +110,9 @@ function App() {
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      {renderPage()}
+      <div className={`grow ${currentPage === "faqs" ? "border-t" : ""}`}>
+        {renderPage()}
+      </div>
       <Footer />
       <BackToTop />
     </div>

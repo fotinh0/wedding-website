@@ -2,6 +2,8 @@ import Marquee from "react-fast-marquee";
 import travelCollage from "../assets/travelCollage.png";
 import type { Language } from "../types";
 import travelTranslations from "../translations/travel";
+import CTABanner from "../components/CTABanner";
+import homepageTranslations from "../translations/homepage";
 
 export default function TravelPage({
   language,
@@ -11,6 +13,7 @@ export default function TravelPage({
   handleNavigation: (page: string) => void;
 }) {
   const t = travelTranslations[language.code];
+  const tHome = homepageTranslations[language.code];
 
   const introText = () => {
     if (language.code === "es")
@@ -397,31 +400,89 @@ export default function TravelPage({
       );
     return (
       <li>
-        <span className="font-bold">Language:</span> English is commonly spoken
-        in tourist areas
+        <span className="font-bold">Language:</span> Albanian but English is
+        commonly spoken in tourist areas
       </li>
     );
   };
 
-  return (
-    <div className="mx-auto pt-4 sm:pt-0">
-      <video
-        className="max-h-[80vh] mx-auto"
-        loop
-        preload="auto"
-        muted
-        autoPlay
-        playsInline
-      >
-        <source
-          src={
-            "https://palevioletred-guanaco-529765.hostingersite.com/wp-content/uploads/2025/03/zoe-hora-home-transcode.mp4"
-          }
-          type="video/mp4"
-        />
-      </video>
+  const gettingThereTextTwo = () => {
+    if (language.code === "es")
+      return (
+        <p>
+          Recomendamos{" "}
+          <a
+            href="https://www.google.com/maps/place/Rent+a+Car+Airport+in+Albania+-+Karruka+Rent+a+Car+Rinas,+international+airport,+Tirana+international+airport+cargo+center,+Rruga+e+Aeroportit,+Tiran%C3%AB,+Albania/@41.4208141,19.7122095,18z/data=!3m1!1e3!4m6!3m5!1s0x13502de4d567d897:0xab95c72955b02c86!8m2!3d41.4208135!4d19.7122094!16s%2Fg%2F11j91pq_rv?g_ep=Eg1tbF8yMDI2MDMwNF8wIJvbDyoASAJQAQ%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline italic"
+          >
+            Karruka Rent a Car
+          </a>
+          , ubicado a unos 5 minutos caminando del aeropuerto.
+        </p>
+      );
+    if (language.code === "sq")
+      return (
+        <p>
+          Ne rekomandojmë{" "}
+          <a
+            href="https://www.google.com/maps/place/Rent+a+Car+Airport+in+Albania+-+Karruka+Rent+a+Car+Rinas,+international+airport,+Tirana+international+airport+cargo+center,+Rruga+e+Aeroportit,+Tiran%C3%AB,+Albania/@41.4208141,19.7122095,18z/data=!3m1!1e3!4m6!3m5!1s0x13502de4d567d897:0xab95c72955b02c86!8m2!3d41.4208135!4d19.7122094!16s%2Fg%2F11j91pq_rv?g_ep=Eg1tbF8yMDI2MDMwNF8wIJvbDyoASAJQAQ%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline italic"
+          >
+            Karruka Rent a Car
+          </a>
+          , i cili ndodhet rreth 5 minuta në këmbë nga aeroporti.
+        </p>
+      );
+    return (
+      <p>
+        We recommend{" "}
+        <a
+          href="https://www.google.com/maps/place/Rent+a+Car+Airport+in+Albania+-+Karruka+Rent+a+Car+Rinas,+international+airport,+Tirana+international+airport+cargo+center,+Rruga+e+Aeroportit,+Tiran%C3%AB,+Albania/@41.4208141,19.7122095,18z/data=!3m1!1e3!4m6!3m5!1s0x13502de4d567d897:0xab95c72955b02c86!8m2!3d41.4208135!4d19.7122094!16s%2Fg%2F11j91pq_rv?g_ep=Eg1tbF8yMDI2MDMwNF8wIJvbDyoASAJQAQ%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline italic"
+        >
+          Karruka Rent a Car
+        </a>
+        , located about a 5-minute walk from the airport.
+      </p>
+    );
+  };
 
-      <div className="text-center mt-12 sm:mt-24 mb-12 mx-4 border-gray-200">
+  return (
+    <div className="mx-auto">
+      <CTABanner
+        text={tHome.RSVPCTAText}
+        handleNavigation={() => handleNavigation("rsvp")}
+      />
+      <div
+        id="hero"
+        className="relative w-full h-[35.71vh] max-h-[35.71vh] sm:h-[65.75vh] sm:max-h-[65.75vh]  overflow-hidden"
+      >
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            className="w-full h-full object-cover"
+            loop
+            preload="auto"
+            muted
+            autoPlay
+            playsInline
+          >
+            <source
+              src={
+                "https://palevioletred-guanaco-529765.hostingersite.com/wp-content/uploads/2025/03/zoe-hora-home-transcode.mp4"
+              }
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+
+      <div className="text-center mt-12 sm:mt-16 mb-16 mx-4 border-gray-200">
         <p className="text-[40px] sm:text-6xl mb-12">{t.title}</p>
         {introText()}
       </div>
@@ -438,7 +499,8 @@ export default function TravelPage({
         <div className="flex flex-col justify-center text-center bg-zinc-50 py-12 px-6">
           <h3 className="text-2xl sm:text-3xl mb-6">{t.gettingThereTitle}</h3>
           <div className="md:w-3xl mx-auto px-4">
-            <p>{t.gettingThereText}</p>
+            <p className="mb-4">{t.gettingThereText}</p>
+            <p>{gettingThereTextTwo()}</p>
           </div>
         </div>
         <div className="flex flex-col justify-center text-center">

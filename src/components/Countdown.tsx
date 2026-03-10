@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import type { HomepageTranslationContent, Lang } from '../types';
+import { useState, useEffect } from "react";
+import type { HomepageTranslationContent, Lang } from "../types";
 
 export default function WeddingCountdown({
   code,
@@ -8,7 +8,7 @@ export default function WeddingCountdown({
   code: Lang;
   translation: HomepageTranslationContent;
 }) {
-  const [weddingDate] = useState(new Date('2026-08-01T18:00:00'));
+  const [weddingDate] = useState(new Date("2026-08-01T15:00:00"));
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -40,7 +40,7 @@ export default function WeddingCountdown({
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
       <div className="text-3xl md:text-4xl font-light tracking-tight text-black mb-2">
-        {String(value).padStart(2, '0')}
+        {String(value).padStart(2, "0")}
       </div>
       <div className="text-xs uppercase tracking-widest text-gray-500 font-light">
         {label}
@@ -71,7 +71,7 @@ export default function WeddingCountdown({
 
         <div className="text-center">
           <div className="text-sm uppercase tracking-widest text-gray-500">
-            {code === 'sq' ? '01/08/26' : '08/01/2026'}
+            {code === "sq" ? "01/08/26" : "08/01/2026"}
           </div>
         </div>
       </div>

@@ -12,8 +12,7 @@ const travelTranslations = {
     bookingTitle: "Booking at Zoe Hora",
 
     gettingThereTitle: "Getting There",
-    gettingThereText: `The nearest airport is Tirana International Airport (TIA), about a 2.5-hour drive from our wedding location. 
-    We recommend planning your travel accordingly. We’ll share more tips soon about transportation options and car rentals to make your journey as smooth as possible.`,
+    gettingThereText: `The nearest airport is Tirana International Airport (TIA), about a 2.5-hour drive from Dhërmi. We highly recommend renting a car, as it is the easiest way to travel along the southern coast.`,
 
     exploringTitle: "Exploring the South",
     exploringText: `We encourage you to take time to explore Albania’s breathtaking southern coast. 
@@ -42,8 +41,7 @@ const travelTranslations = {
     bookingTitle: "Rezervimi në Zoe Hora",
 
     gettingThereTitle: "Si të Arrini",
-    gettingThereText: `Aeroporti më i afërt është Aeroporti Ndërkombëtar i Tiranës (TIA), rreth 2.5 orë me makinë nga vendndodhja e dasmës. 
-    Ju rekomandojmë të planifikoni udhëtimin tuaj në përputhje me rrethanat. Së shpejti do të ndajmë më shumë këshilla për transportin dhe qiratë e makinave që udhëtimi juaj të jetë sa më i qetë.`,
+    gettingThereText: `Aeroporti më i afërt është Aeroporti Ndërkombëtar i Tiranës (TIA), rreth 2.5 orë me makinë nga Dhërmiu. Ju rekomandojmë shumë të merrni një makinë me qira, pasi është mënyra më e lehtë për të udhëtuar përgjatë bregdetit jugor.`,
 
     exploringTitle: "Eksploroni Jugun",
     exploringText: `Ju inkurajojmë të shfrytëzoni kohën për të eksploruar bregdetin jugor të Shqipërisë. 
@@ -72,8 +70,7 @@ const travelTranslations = {
     bookingTitle: "Reservas en Zoe Hora",
 
     gettingThereTitle: "Cómo Llegar",
-    gettingThereText: `El aeropuerto más cercano es el Aeropuerto Internacional de Tirana (TIA), a unas 2.5 horas en coche del lugar de la boda. 
-    Te recomendamos planificar tu viaje con anticipación. Pronto compartiremos más consejos sobre opciones de transporte y alquiler de autos para que tu viaje sea lo más cómodo posible.`,
+    gettingThereText: `El aeropuerto más cercano es el Aeropuerto Internacional de Tirana (TIA), a aproximadamente 2.5 horas en coche de Dhërmi. Recomendamos alquilar un coche, ya que es la forma más fácil de viajar por la costa sur.`,
 
     exploringTitle: "Explorando el Sur",
     exploringText: `Te animamos a tomarte un tiempo para explorar la impresionante costa sur de Albania. 

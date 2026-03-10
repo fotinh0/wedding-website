@@ -1,9 +1,9 @@
-import type { Language } from '../types';
+import type { Language } from "../types";
 
 const languages: Language[] = [
-  { code: 'en', name: 'English' },
-  { code: 'es', name: 'Spanish' },
-  { code: 'sq', name: 'Albanian' },
+  { code: "sq", name: "Albanian" },
+  { code: "es", name: "Spanish" },
+  { code: "en", name: "English" },
 ];
 
 export default languages;

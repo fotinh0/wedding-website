@@ -1,10 +1,19 @@
-import happiness from "../assets/happiness.png";
 import happinessMobile from "../assets/happinessMini.png";
+import happinessLg from "../assets/scheduleCollageLg.png";
+import CTABanner from "../components/CTABanner";
+import homepageTranslations from "../translations/homepage";
 import scheduleTranslations from "../translations/schedule";
 import type { Language } from "../types";
 
-export default function SchedulePage({ language }: { language: Language }) {
+export default function SchedulePage({
+  language,
+  handleNavigation,
+}: {
+  language: Language;
+  handleNavigation: (page: string) => void;
+}) {
   const t = scheduleTranslations[language.code];
+  const tHome = homepageTranslations[language.code];
 
   const ceremonyText = () => {
     if (language.code === "es")
@@ -190,17 +199,26 @@ export default function SchedulePage({ language }: { language: Language }) {
 
   return (
     <div className="mx-auto">
-      <img
-        src={happinessMobile}
-        alt="schedule-collage"
-        className="max-h-[35vh] mx-auto sm:hidden"
+      <CTABanner
+        text={tHome.RSVPCTAText}
+        handleNavigation={() => handleNavigation("rsvp")}
       />
-      <img
-        src={happiness}
-        alt="schedule-collage"
-        className="hidden sm:block h-fit sm:max-h-[60vh] mx-auto"
-      />
-      <div className="max-w-5xl mx-auto text-center px-4 my-16 sm:my-24">
+      <div
+        id="hero"
+        className="relative w-full h-[35.71vh] max-h-[35.71vh] sm:h-[65.75vh] sm:max-h-[65.75vh] overflow-hidden"
+      >
+        <img
+          src={happinessMobile}
+          alt="schedule-collage"
+          className="absolute inset-0 w-full h-full object-cover sm:hidden"
+        />
+        <img
+          src={happinessLg}
+          alt="schedule-collage"
+          className="hidden sm:block absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+      <div className="max-w-5xl mx-auto text-center px-4 my-16">
         <div className="flex flex-col justify-center">
           <p className="text-[40px] sm:text-6xl mb-8 italic">{t.title}</p>
           <p className="tracking-wide font-light">{t.intro}</p>

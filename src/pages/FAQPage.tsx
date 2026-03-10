@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import type { Language } from '../types';
-import faqTranslations from '../translations/faq';
+import { useState } from "react";
+import type { Language } from "../types";
+import faqTranslations from "../translations/faq";
 
 export default function FAQPage({ language }: { language: Language }) {
   const [openStates, setOpenStates] = useState<Record<number, boolean>>({});
@@ -15,13 +15,12 @@ export default function FAQPage({ language }: { language: Language }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4">
-      <div className="text-center sm:mt-24 mb-12 sm:mb-20">
+      <div className="text-center sm:mt-16 mb-12 sm:mb-20 mt-8">
         <p className="text-[40px] sm:text-7xl font-light mb-12">{t.title}</p>
         <p className="text-lg sm:text-xl text-gray-600 font-light tracking-wide">
           {t.subtitle}
         </p>
       </div>
-
       <div className="space-y-4">
         {t.faqs.map((faq, index) => (
           <div key={index} className="border-b border-gray-200 cursor-pointer">
@@ -33,7 +32,7 @@ export default function FAQPage({ language }: { language: Language }) {
                 {faq.question}
               </span>
               <span className="text-2xl text-black font-light shrink-0">
-                {openStates[index] ? '−' : '+'}
+                {openStates[index] ? "−" : "+"}
               </span>
             </button>
 
@@ -45,7 +44,6 @@ export default function FAQPage({ language }: { language: Language }) {
           </div>
         ))}
       </div>
-
       <div className="mt-20 bg-zinc-50 p-12 text-center mb-20">
         <p className="text-3xl font-light mb-6 tracking-wide">
           {t.stillHaveQuestions}

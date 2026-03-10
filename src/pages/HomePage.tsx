@@ -1,21 +1,26 @@
 // import { Heart, Calendar, MapPin } from 'lucide-react';
-import Marquee from 'react-fast-marquee';
-import Countdown from '../components/Countdown';
-import logo3 from '../assets/logos/3.png';
-import { useEffect, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import type { Language } from '../types';
-import homepageTranslations from '../translations/homepage';
-import foreheadkiss from '../assets/forehead-kiss.jpg';
-import kissing from '../assets/kissing.jpg';
-import hugging from '../assets/hugging.jpg';
-import standing from '../assets/standing.jpg';
+import Marquee from "react-fast-marquee";
+import Countdown from "../components/Countdown";
+import logo3 from "../assets/logos/3.png";
+import { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import type { Language } from "../types";
+import homepageTranslations from "../translations/homepage";
+import foreheadkiss from "../assets/forehead-kiss.jpg";
+import kissing from "../assets/kissing.jpg";
+import hugging from "../assets/hugging.jpg";
+import standing from "../assets/standing.jpg";
+import CTABanner from "../components/CTABanner";
 
 interface HomePageProps {
   language: Language;
+  handleNavigation: (page: string) => void;
 }
 
-export default function HomePage({ language }: HomePageProps) {
+export default function HomePage({
+  language,
+  handleNavigation,
+}: HomePageProps) {
   const t = homepageTranslations[language.code];
 
   const [speed, setSpeed] = useState(150);
@@ -27,17 +32,21 @@ export default function HomePage({ language }: HomePageProps) {
 
     updateSpeed();
 
-    window.addEventListener('resize', updateSpeed);
-    return () => window.removeEventListener('resize', updateSpeed);
+    window.addEventListener("resize", updateSpeed);
+    return () => window.removeEventListener("resize", updateSpeed);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const nextSection = document.getElementById(sectionId);
-    nextSection?.scrollIntoView({ behavior: 'smooth' });
+    nextSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section>
+      <CTABanner
+        text={t.RSVPCTAText}
+        handleNavigation={() => handleNavigation("rsvp")}
+      />
       <div className="relative overflow-hidden">
         {/* Overlay text */}
         <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-white bg-black/5">
@@ -47,7 +56,7 @@ export default function HomePage({ language }: HomePageProps) {
         </div>
         <div
           className="sm:hidden absolute bottom-9 left-1/2 transform -translate-x-1/2 z-20 animate-bounce"
-          onClick={() => scrollToSection('welcome')}
+          onClick={() => scrollToSection("welcome")}
         >
           <ChevronDown size={40} color="white" />
         </div>
@@ -130,20 +139,11 @@ export default function HomePage({ language }: HomePageProps) {
         <Countdown code={language.code} translation={t} />
       </div>
 
-      <div className="bg-zinc-50 py-2">
-        <Marquee gradient={false} speed={100} pauseOnHover={true}>
-          {[t.saveTheDateText, t.saveTheDateText, t.saveTheDateText].map(
-            (text, i) => (
-              <p
-                key={i}
-                className="text2xl font-semibold uppercase tracking-widest mr-50 cursor-pointer"
-              >
-                {text}
-              </p>
-            )
-          )}
-        </Marquee>
-      </div>
+      {/* CTA Banner */}
+      <CTABanner
+        text={t.RSVPCTAText}
+        handleNavigation={() => handleNavigation("rsvp")}
+      />
     </section>
   );
 }

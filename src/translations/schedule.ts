@@ -18,7 +18,7 @@ export const scheduleTranslations = {
   sq: {
     title: "Fundjava e Dasmës",
     intro:
-      "Me padurim presim të festojmë me ju. Më poshtë do të gjeni një pasqyrë të eventeve që rrethojnë fundjavën e dasmës sonë. Detajet do të përditësohen vazhdimisht ndërsa planet finalizohen.",
+      "Mezi presim të festojmë me ju. Më poshtë është një përmbledhje e eventeve gjatë fundjavës së dasmës sonë. Detajet do të përditësohen ndërsa planet përfundohen.",
     welcomeEventTitle: "Event Mirëseardhjeje",
     welcomeEventDate: "31 Korrik 2026",
     weddingDayTitle: "Dita e Dasmës",
