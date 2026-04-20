@@ -6,7 +6,7 @@ const faqTranslations = {
       {
         question: "What should I wear?",
         answer:
-          "Our wedding will be black tie. This does not mean all black attire - we will be sharing a style guide with example looks in the coming weeks to help you plan.",
+          "Our wedding will be black tie. This does not mean all black attire - we have shared a style guide with example looks on the Details page help you plan.",
       },
       {
         question: "When should I RSVP?",
@@ -47,7 +47,7 @@ const faqTranslations = {
       {
         question: "Çfarë duhet të vesh?",
         answer:
-          "Të ftuarit mund të presin një kod veshjeje formal. Do të ndajmë një udhëzues stili me shembuj veshjesh më afër datës, për t’ju ndihmuar në planifikim.",
+          "Të ftuarit mund të presin një kod veshjeje formal. Kemi ndarë një guidë stili me shembuj në faqen e Detajeve për t’ju ndihmuar në përgatitje.",
       },
       {
         question: "Kur duhet të bëj RSVP?",
@@ -88,7 +88,7 @@ const faqTranslations = {
       {
         question: "¿Qué debo usar?",
         answer:
-          "Nuestra boda será de etiqueta (black tie). En las próximas semanas compartiremos una guía de estilo con ejemplos de looks para ayudarles a planificar.",
+          "Nuestra boda será de etiqueta (black tie). Hemos compartido una guía de estilo con ejemplos en la página de Detalles para ayudarte a planificar.",
       },
       {
         question: "¿Cuándo debo confirmar mi asistencia (RSVP)?",

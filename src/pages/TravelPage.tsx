@@ -483,7 +483,7 @@ export default function TravelPage({
       </div>
 
       <div className="text-center mt-12 sm:mt-16 mb-16 mx-4 border-gray-200">
-        <p className="text-[40px] sm:text-6xl mb-12">{t.title}</p>
+        <p className="text-[40px] sm:text-5xl mb-12">{t.title}</p>
         {introText()}
       </div>
 

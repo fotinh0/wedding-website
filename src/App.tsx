@@ -12,7 +12,7 @@ import RSVPPage from "./pages/RSVPPage";
 
 const englishNavigationItems = [
   { name: "Home", href: "home" },
-  { name: "Schedule", href: "schedule" },
+  { name: "Details", href: "schedule" },
   { name: "Travel", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "FAQs", href: "faqs" },
@@ -20,7 +20,7 @@ const englishNavigationItems = [
 
 const albanianNavigationItems = [
   { name: "Kryefaqja", href: "home" },
-  { name: "Programi", href: "schedule" },
+  { name: "Detaje", href: "schedule" },
   { name: "Udhëtimi", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "Pyetje të Shpeshta", href: "faqs" },
@@ -28,7 +28,7 @@ const albanianNavigationItems = [
 
 const spanishNavigationItems = [
   { name: "Inicio", href: "home" },
-  { name: "Agenda", href: "schedule" },
+  { name: "Detalles", href: "schedule" },
   { name: "Viaje", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "Preguntas Frecuentes", href: "faqs" },

@@ -4,6 +4,9 @@ import CTABanner from "../components/CTABanner";
 import homepageTranslations from "../translations/homepage";
 import scheduleTranslations from "../translations/schedule";
 import type { Language } from "../types";
+import women from "../assets/Women.png";
+import men from "../assets/Men.png";
+import { useState } from "react";
 
 export default function SchedulePage({
   language,
@@ -15,185 +18,38 @@ export default function SchedulePage({
   const t = scheduleTranslations[language.code];
   const tHome = homepageTranslations[language.code];
 
-  const ceremonyText = () => {
-    if (language.code === "es")
-      return (
-        <p className=" leading-relaxed">
-          La ceremonia tendrá lugar en{" "}
-          <span className="font-bold">Zoe Hora</span> en Dhërmi, Albania.
-        </p>
-      );
+  const [openWomen, setOpenWomen] = useState(false);
+  const [openMen, setOpenMen] = useState(false);
 
-    if (language.code === "sq")
-      return (
-        <p className=" leading-relaxed">
-          Ceremonia do të zhvillohet në{" "}
-          <span className="font-bold">Zoe Hora</span> në Dhërmi, Albania.
-        </p>
-      );
+  const getWelcomePartyDetails = () => {
+    let dressCodeLabel = "Dress";
+    let dressCode = "Smart casual";
+    let durationLabel = "Duration";
+    let duration = "Approximately 2-3 hours";
 
-    return (
-      <p className="leading-relaxed">
-        The ceremony will take place at{" "}
-        <span className="font-bold">Zoe Hora</span> in Dhërmi, Albania.
-      </p>
-    );
-  };
-
-  const welcomeEventText = () => {
-    if (language.code === "es") {
-      return (
-        <div className="flex flex-col gap-4">
-          <p className="text-md leading-relaxed">
-            Para dar inicio al fin de semana, organizaremos un encuentro de
-            bienvenida en Kantina & Ferma Dukat, una bodega y granja familiar
-            ubicada en Vlorë, aproximadamente a 30 minutos de Zoe Hora.
-          </p>
-
-          <p className="text-md leading-relaxed">
-            Durante un viaje reciente a Albania, uno de los momentos más
-            inolvidables para nosotros fue compartir nuestra primera cena
-            rodeados de montañas, naturaleza y comida increíble. Nos hace mucha
-            ilusión recrear esa sensación y compartir con ustedes una
-            experiencia verdaderamente auténtica albanesa.
-          </p>
-
-          <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-md leading-relaxed mb-2">
-                La velada incluirá:
-              </p>
-              <ul className="list-disc ml-8">
-                <li className="mb-2">
-                  Degustaciones de vinos blancos, rosados y tintos elaborados
-                  localmente
-                </li>
-                <li className="mb-2">
-                  Platos tradicionales albaneses preparados en el lugar con
-                  ingredientes frescos y de temporada
-                </li>
-                <li>
-                  Un ambiente acogedor y cuidadosamente curado, diseñado para
-                  que los invitados conecten y disfruten de la compañía mutua
-                </li>
-              </ul>
-            </div>
-
-            <p>
-              Este encuentro tiene como objetivo reunir a todos antes del día de
-              la boda, creando conexiones y momentos compartidos para que la
-              celebración se sienta cálida, cercana y llena de energía desde el
-              primer momento.
-            </p>
-            <p>
-              El código de vestimenta será smart casual y se espera que el
-              evento tenga una duración aproximada de 2–3 horas. Los detalles
-              del horario se compartirán más cerca de la fecha.
-            </p>
-          </div>
-        </div>
-      );
-    }
     if (language.code === "sq") {
-      return (
-        <div className="flex flex-col gap-4">
-          <p className="text-md leading-relaxed">
-            Për të nisur fundjavën, do të organizojmë një event mirëseardhjeje
-            në Kantina & Ferma Dukat, një kantinë vere dhe fermë familjare e
-            vendosur në Vlorë, rreth 30 minuta larg nga Zoe Hora.
-          </p>
-
-          <p className="text-md leading-relaxed">
-            Gjatë një udhëtimi të fundit në Shqipëri, një nga momentet më të
-            paharrueshme për ne ishte ndarja e darkës sonë të parë, të rrethuar
-            nga malet, natyra dhe ushqimi i jashtëzakonshëm. Jemi shumë të
-            lumtur ta rikrijojmë atë ndjesi dhe të ndajmë me ju një përvojë
-            vërtet autentike shqiptare.
-          </p>
-
-          <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-md leading-relaxed mb-2">
-                Mbrëmja do të përfshijë:
-              </p>
-              <ul className="list-disc ml-8">
-                <li className="mb-2">
-                  Degustim verërash të bardha, rosé dhe të kuqe të prodhuara
-                  lokalisht
-                </li>
-                <li className="mb-2">
-                  Gatime tradicionale shqiptare, të përgatitura në vend me
-                  përbërës të freskët dhe sezonalë
-                </li>
-                <li>
-                  Një ambient mikpritës dhe të kuruar me kujdes, i krijuar për
-                  të lidhur të ftuarit dhe për të shijuar shoqërinë e
-                  njëri-tjetrit
-                </li>
-              </ul>
-            </div>
-
-            <p>
-              Ky event synon të mbledhë të gjithë përpara ditës së dasmës — duke
-              krijuar lidhje dhe momente të përbashkëta, në mënyrë që festimi të
-              ndihet i ngrohtë, familjar dhe plot energji që në fillim.
-            </p>
-            <p>
-              Kodi i veshjes do të jetë smart casual, dhe eventi pritet të
-              zgjasë rreth 2–3 orë, me detaje të tjera të orarit që do të ndahen
-              më afër datës.
-            </p>
-          </div>
-        </div>
-      );
+      dressCodeLabel = "Veshja";
+      dressCode = "Smart casual";
+      durationLabel = "Kohëzgjatja";
+      duration = "Rreth 2-3 orë";
     }
+
+    if (language.code === "es") {
+      dressCodeLabel = "Vestimenta";
+      dressCode = "Smart casual";
+      durationLabel = "Duración";
+      duration = "Aproximadamente 2-3 horas";
+    }
+
     return (
-      <div className="flex flex-col gap-4">
-        <p className="text-md leading-relaxed">
-          To kick off the weekend, we’ll be hosting a welcome gathering at
-          Kantina & Ferma Dukat, a family-run winery and farm located in Vlorë,
-          approximately 30 minutes from Zoe Hora.
+      <>
+        <p className="text-sm text-gray-500 leading-relaxed mt-4">
+          <span className="font-bold">{dressCodeLabel}:</span> {dressCode}
         </p>
-
-        <p className="text-md leading-relaxed">
-          During a recent trip to Albania, one of the most unforgettable moments
-          for us was sharing our first dinner surrounded by mountains, nature,
-          and incredible food. We’re excited to recreate that feeling and share
-          a truly authentic Albanian experience with you.
+        <p className="text-sm text-gray-500 leading-relaxed">
+          <span className="font-bold">{durationLabel}:</span> {duration}
         </p>
-
-        <div className="flex flex-col gap-4">
-          <div>
-            <p className="text-md leading-relaxed mb-2">
-              The evening will include:
-            </p>
-            <ul className="list-disc ml-8">
-              <li className="mb-2">
-                Tastings of locally crafted white, rosé, and red wines
-              </li>
-              <li className="mb-2">
-                Traditional Albanian dishes prepared in-house with fresh,
-                seasonal ingredients
-              </li>
-              <li>
-                An inviting, thoughtfully, curated setting designed for guests
-                to connect and enjoy one another's company
-              </li>
-            </ul>
-          </div>
-
-          <p>
-            This gathering is intended to bring everyone together ahead of the
-            wedding day — creating connections and shared moments so the
-            celebration feels warm, familiar, and full of energy from the very
-            start.
-          </p>
-          <p>
-            The event will be smart casual and is expected to last approximately
-            2–3 hours, with timing details to be shared closer to the date.
-          </p>
-        </div>
-      </div>
+      </>
     );
   };
 
@@ -218,47 +74,187 @@ export default function SchedulePage({
           className="hidden sm:block absolute inset-0 w-full h-full object-cover"
         />
       </div>
-      <div className="max-w-5xl mx-auto text-center px-4 my-16">
-        <div className="flex flex-col justify-center">
-          <p className="text-[40px] sm:text-6xl mb-8 italic">{t.title}</p>
-          <p className="tracking-wide font-light">{t.intro}</p>
-        </div>
+
+      {/* Header */}
+      <div className="text-center py-16 sm:py-24 px-8 max-w-4xl mx-auto">
+        <p className="text-[35px] sm:text-5xl font-normal mb-6">{t?.title}</p>
+        <p className="text-base md:text-lg tracking-wide font-light text-gray-500 leading-relaxed">
+          {t?.intro}
+        </p>
       </div>
 
-      <div></div>
+      <div className="max-w-5xl mx-auto px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-50 pb-20 sm:pb-28">
+          {/* Timeline */}
+          <div>
+            <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-500 mb-2">
+              {t.scheduleLabel}
+            </p>
+            <p className="text-2xl sm:text-3xl font-normal mb-8">
+              {t.timelineLabel}
+            </p>
 
-      <div className="sm:py-24 bg-zinc-50">
-        <div className="max-w-5xl mx-auto py-8">
-          <div className="relative flex flex-col sm:flex-row items-center">
-            <div className="sm:w-2/5 p-8 flex justify-end text-center flex-col">
-              <h3 className="text-3xl italic">{t.welcomeEventDate}</h3>
-              <p className="text-center text-lg">{t.welcomeEventTitle}</p>
-            </div>
-            <div className="sm:w-3/5 pt-0 pb-8 px-8 sm:pb-10 sm:pt-8 text-center sm:text-left sm:border-l">
-              {welcomeEventText()}
+            <ol className="relative border-l border-gray-200 ml-1">
+              {t.timeline.map((item, i) => {
+                return item.isEvent ? (
+                  <li key={i} className="pl-6 relative mb-8">
+                    {/* Dot */}
+                    <span
+                      className={`absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full border ${
+                        i === 0
+                          ? "bg-gray-800 border-gray-800"
+                          : "bg-white border-gray-400"
+                      }`}
+                    />
+                    {!item.hideTime && (
+                      <p className="text-xs sm:text-sm tracking-[0.15em] uppercase text-gray-500 mb-1">
+                        {item.time}
+                      </p>
+                    )}
+                    <p className="italic text-base sm:text-lg mb-0.5">
+                      {item.event}
+                    </p>
+                  </li>
+                ) : (
+                  <li key={i} className="pl-6 relative">
+                    {/* Horizontal line */}
+                    <span className="absolute -left-4 top-2.5 w-8 h-px bg-gray-300" />
+                    <p className="italic text-base sm:text-lg mb-4 tracking-wide text-gray-600">
+                      {item.event}
+                    </p>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+
+          {/* Information */}
+          <div>
+            <p className="text-xs sm:text-sm tracking-[0.15em] uppercase text-gray-500 mb-2">
+              {t.whatToExpectLabel}
+            </p>
+            <p className="text-2xl sm:text-3xl font-normal mb-8">
+              {t.infromationLabel}
+            </p>
+            <div className="space-y-6">
+              {t.info.map((item, i) => (
+                <div key={i}>
+                  {i !== 0 && <hr className="border-t border-gray-100 mb-6" />}
+                  <span className="inline-block text-[10px] tracking-[0.12em] uppercase border border-gray-500 rounded-full px-2.5 py-0.5 text-gray-600 mb-2">
+                    {item.badge}
+                  </span>
+                  <h3 className="italic text-base sm:text-lg mb-2">
+                    {item.heading}
+                  </h3>
+                  {item.body.map((p, j) => (
+                    <p
+                      key={j}
+                      className="text-sm text-gray-500 leading-relaxed"
+                    >
+                      {p}
+                    </p>
+                  ))}
+                  {i === 0 && getWelcomePartyDetails()}
+                </div>
+              ))}
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="max-w-5xl mx-auto py-8">
-          <div className="relative flex flex-col sm:flex-row items-center">
-            <div className="sm:w-2/5 p-8 flex justify-end text-center flex-col">
-              <h3 className="text-3xl italic">{t.weddingDayDate}</h3>
-              <p className="text-center text-lg">{t.weddingDayTitle}</p>
-            </div>
-            <div className="sm:w-3/5 pt-0 pb-8 px-8 sm:pb-10 sm:pt-8 text-center sm:text-left sm:border-l flex flex-col gap-8">
-              <div>
-                <p className="text-xl font-medium">{t.ceremonyTitle}</p>
-                {ceremonyText()}
-              </div>
-              <div>
-                <p className="text-xl font-medium">{t.receptionTitle}</p>
-                <p className="leading-relaxed">{t.receptionText}</p>
-              </div>
-            </div>
-          </div>
+      {/* ── Divider ── */}
+      <hr className="border-t border-gray-300 mb-16 mx-8 sm:mb-20 sm:max-w-6xl sm:mx-auto sm:hidden" />
+
+      <div id="wedding-attire" className="max-w-5xl mx-auto px-8 pb-16">
+        <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-400 mb-2">
+          {t.dressCodeLabel}
+        </p>
+        <p className="text-2xl sm:text-3xl font-normal mb-10">
+          {t.weddingAttireLabel}
+        </p>
+
+        {/* Women */}
+        <div className="mb-16">
+          <h3 className="italic text-lg mb-2">{t.womenAttireLabel}</h3>
+          <p className="text-sm text-gray-500 leading-relaxed mb-8">
+            {t.womenAttireText}
+          </p>
+          <button
+            onClick={() => setOpenWomen(true)}
+            className="block overflow-hidden rounded-xl w-full focus:outline-none mb-6 cursor-zoom-in"
+          >
+            <img
+              src={women}
+              alt="Women's attire inspiration"
+              className="w-full object-cover hover:scale-[1.02] transition-transform duration-500"
+            />
+          </button>
+        </div>
+
+        <hr className="border-t border-gray-100 mb-16" />
+
+        {/* Men */}
+        <div>
+          <h3 className="italic text-lg mb-2">{t.menAttireLabel}</h3>
+          <p className="text-sm text-gray-500 leading-relaxed mb-8">
+            {t.menAttireText}
+          </p>
+          <button
+            onClick={() => setOpenMen(true)}
+            className="block overflow-hidden rounded-xl w-full focus:outline-none mb-6 cursor-zoom-in"
+          >
+            <img
+              src={men}
+              alt="Men's attire inspiration"
+              className="w-full object-cover hover:scale-[1.02] transition-transform duration-500"
+            />
+          </button>
         </div>
       </div>
+
+      {/* ── Lightboxes ── */}
+      {openWomen && (
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
+          onClick={() => setOpenWomen(false)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenWomen(false);
+            }}
+          >
+            ×
+          </button>
+          <img
+            src={women}
+            alt="Women's attire inspiration"
+            className="max-w-full max-h-full rounded-xl"
+          />
+        </div>
+      )}
+      {openMen && (
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
+          onClick={() => setOpenMen(false)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenMen(false);
+            }}
+          >
+            ×
+          </button>
+          <img
+            src={men}
+            alt="Men's attire inspiration"
+            className="max-w-full max-h-full rounded-xl"
+          />
+        </div>
+      )}
     </div>
   );
 }
