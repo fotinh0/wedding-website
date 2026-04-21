@@ -57,6 +57,7 @@ export const scheduleTranslations = {
         hideTime: false,
       },
     ],
+    timelineDisclaimer: "Exact timing will be shared closer to the date.",
     whatToExpectLabel: "What to Expect",
     infromationLabel: "Information",
     info: [
@@ -92,6 +93,8 @@ export const scheduleTranslations = {
     menAttireLabel: "For Men",
     menAttireText:
       "Classic tuxedos and suits with a formal tie or bow tie are encouraged. Please avoid white or off-white suits or jackets, as these colors are reserved for the couple.",
+    optionalLabel: "Optional",
+    hairAndMakeupLabel: "Hair & Makeup",
   },
 
   sq: {
@@ -152,6 +155,7 @@ export const scheduleTranslations = {
         hideTime: false,
       },
     ],
+    timelineDisclaimer: "Orari i saktë do të ndahet më afër datës.",
     whatToExpectLabel: "Çfarë të prisni",
     infromationLabel: "Informacion",
     info: [
@@ -187,6 +191,8 @@ export const scheduleTranslations = {
     menAttireLabel: "Për burra",
     menAttireText:
       "Rekomandohen tuxedo ose kostume klasikë me kravatë ose papion. Ju lutemi shmangni kostumet ose xhaketat e bardha, pasi këto ngjyra janë të rezervuara për çiftin.",
+    optionalLabel: "Opsionale",
+    hairAndMakeupLabel: "Flokë & Makeup",
   },
 
   es: {
@@ -194,7 +200,7 @@ export const scheduleTranslations = {
     intro:
       "Todo lo que necesitas para celebrar con nosotros en Albania, desde la bienvenida hasta el último baile. Los detalles seguirán actualizándose a medida que se finalicen los planes.",
     scheduleLabel: "Programa",
-    timelineLabel: "Cronograma",
+    timelineLabel: "Itinerario",
     timeline: [
       {
         time: "Viernes por la tarde",
@@ -247,6 +253,8 @@ export const scheduleTranslations = {
         hideTime: false,
       },
     ],
+    timelineDisclaimer:
+      "El horario exacto se compartirá más cerca de la fecha.",
     whatToExpectLabel: "Qué esperar",
     infromationLabel: "Información",
     info: [
@@ -268,7 +276,7 @@ export const scheduleTranslations = {
         badge: "Tarde en la noche",
         heading: "After Party",
         body: [
-          "Para quienes deseen continuar la celebración, únanse a nosotros para música, bebidas y baile hasta tarde.",
+          "Para quienes deseen continuar la celebración, acompáñennos para disfrutar de música, bebidas y baile hasta tarde.",
         ],
       },
     ],
@@ -282,6 +290,8 @@ export const scheduleTranslations = {
     menAttireLabel: "Para hombres",
     menAttireText:
       "Se recomiendan esmóquines clásicos y trajes elegantes con corbata o corbatín. Por favor, eviten trajes o chaquetas blancas o en tonos similares, ya que estos colores están reservados para la pareja.",
+    optionalLabel: "Opcional",
+    hairAndMakeupLabel: "Peluquería y Maquillaje",
   },
 };
 

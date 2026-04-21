@@ -53,6 +53,92 @@ export default function SchedulePage({
     );
   };
 
+  const getMakeupDetails = () => {
+    if (language.code === "sq") {
+      return (
+        <div>
+          <p className="text-sm text-gray-500 leading-relaxed mb-4">
+            Për të ftuarit që janë të interesuar për grim dhe flokë, një mundësi
+            në Vlorë është Markus Ramaj (
+            <a
+              href="https://www.instagram.com/markussramaj/?__d=dist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @markussramaj
+            </a>
+            ). <br />
+            WhatsApp: +355 69 845 8075
+          </p>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            Çmimet për shërbimet e flokëve dhe grimit fillojnë rreth €80. Duke
+            qenë se Vlora është rreth një orë larg nga Dhërmiu, ju rekomandojmë
+            të rezervoni më herët gjatë ditës për të pasur kohë për udhëtim. Ju
+            lutemi planifikoni të vini rreth orës 16:30, oraret përfundimtare do
+            të ndahen më afër datës. Keni mundesi të eksploroni edhe artistë të
+            tjerë.
+          </p>
+        </div>
+      );
+    }
+
+    if (language.code === "es") {
+      return (
+        <div>
+          <p className="text-sm text-gray-500 leading-relaxed mb-4">
+            Para los invitados interesados en servicios de peluquería y
+            maquillaje, una opción en Vlorë es Markus Ramaj (
+            <a
+              href="https://www.instagram.com/markussramaj/?__d=dist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @markussramaj
+            </a>
+            ). <br />
+            WhatsApp: +355 69 845 8075
+          </p>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            Los precios para servicios de peluquería y maquillaje comienzan
+            aproximadamente en €80. Dado que Vlorë está a alrededor de 1 hora de
+            Dhërmi, recomendamos reservar más temprano en el día para permitir
+            tiempo de traslado. Se recomienda llegar sobre las 4:30 p.m., y el
+            horario final se confirmará más cerca de la fecha. Los invitados
+            también pueden explorar otros profesionales.
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <p className="text-sm text-gray-500 leading-relaxed mb-4">
+          For guests interested in hair and makeup, one option in Vlorë is
+          Markus Ramaj (
+          <a
+            href="https://www.instagram.com/markussramaj/?__d=dist"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300"
+          >
+            @markussramaj
+          </a>
+          ). <br />
+          WhatsApp: +355 69 845 8075
+        </p>
+        <p className="text-sm text-gray-500 leading-relaxed">
+          Pricing for hair and makeup services starts at approximately €80. As
+          Vlorë is about one hour from Dhërmi, we recommend booking earlier in
+          the day to allow time for travel. Guests should plan to arrive around
+          4:30 PM, with final timing to be shared closer to the date. Guests are
+          welcome to explore other artists as well.
+        </p>
+      </div>
+    );
+  };
+
   return (
     <div className="mx-auto">
       <CTABanner
@@ -126,6 +212,9 @@ export default function SchedulePage({
                 );
               })}
             </ol>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t.timelineDisclaimer}
+            </p>
           </div>
 
           {/* Information */}
@@ -165,7 +254,10 @@ export default function SchedulePage({
       {/* ── Divider ── */}
       <hr className="border-t border-gray-300 mb-16 mx-8 sm:mb-20 sm:max-w-6xl sm:mx-auto sm:hidden" />
 
-      <div id="wedding-attire" className="max-w-5xl mx-auto px-8 pb-16">
+      <div
+        id="wedding-attire"
+        className="max-w-5xl mx-auto px-8 pb-20 sm:pb-28"
+      >
         <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-400 mb-2">
           {t.dressCodeLabel}
         </p>
@@ -210,6 +302,19 @@ export default function SchedulePage({
             />
           </button>
         </div>
+      </div>
+
+      {/* ── Divider ── */}
+      <hr className="border-t border-gray-300 mb-16 mx-8 sm:mb-20 sm:max-w-6xl sm:mx-auto sm:hidden" />
+
+      <div id="hair-and-makeup" className="max-w-5xl mx-auto px-8 pb-16">
+        <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-400 mb-2">
+          {t.optionalLabel}
+        </p>
+        <p className="text-2xl sm:text-3xl font-normal mb-8">
+          {t.hairAndMakeupLabel}
+        </p>
+        {getMakeupDetails()}
       </div>
 
       {/* ── Lightboxes ── */}

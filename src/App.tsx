@@ -12,7 +12,7 @@ import RSVPPage from "./pages/RSVPPage";
 
 const englishNavigationItems = [
   { name: "Home", href: "home" },
-  { name: "Details", href: "schedule" },
+  { name: "Details", href: "details" },
   { name: "Travel", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "FAQs", href: "faqs" },
@@ -20,7 +20,7 @@ const englishNavigationItems = [
 
 const albanianNavigationItems = [
   { name: "Kryefaqja", href: "home" },
-  { name: "Detaje", href: "schedule" },
+  { name: "Detaje", href: "details" },
   { name: "Udhëtimi", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "Pyetje të Shpeshta", href: "faqs" },
@@ -28,7 +28,7 @@ const albanianNavigationItems = [
 
 const spanishNavigationItems = [
   { name: "Inicio", href: "home" },
-  { name: "Detalles", href: "schedule" },
+  { name: "Detalles", href: "details" },
   { name: "Viaje", href: "travel" },
   { name: "RSVP", href: "rsvp" },
   { name: "Preguntas Frecuentes", href: "faqs" },
@@ -73,7 +73,7 @@ function App() {
             handleNavigation={handleNavigate}
           />
         );
-      case "schedule":
+      case "details":
         return (
           <SchedulePage
             language={selectedLanguage}
