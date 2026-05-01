@@ -46,7 +46,7 @@ export default function SchedulePage({
 
     return (
       <>
-        <p className="text-sm text-gray-500 leading-relaxed mt-4">
+        <p className="text-sm text-gray-500 leading-relaxed my-4">
           <span className="font-bold">{dressCodeLabel}:</span> {dressCode}
         </p>
         <p className="text-sm text-gray-500 leading-relaxed">
