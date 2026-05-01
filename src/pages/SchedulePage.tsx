@@ -22,21 +22,24 @@ export default function SchedulePage({
   const [openMen, setOpenMen] = useState(false);
 
   const getWelcomePartyDetails = () => {
-    let dressCodeLabel = "Dress";
-    let dressCode = "Smart casual";
+    let dressCodeLabel = "Dress code";
+    let dressCode =
+      "Smart casual — summer attire suited for a winery (flowy or midi dresses, lightweight fabrics, button-downs, polos, chino pants). Please avoid white, ivory, or similar shades.";
     let durationLabel = "Duration";
     let duration = "Approximately 2-3 hours";
 
     if (language.code === "sq") {
-      dressCodeLabel = "Veshja";
-      dressCode = "Smart casual";
+      dressCodeLabel = "Kodi i veshjes";
+      dressCode =
+        "Smart casual — veshje verore të përshtatshme për një kantinë (fustane të rrjedhshme ose midi, materiale të lehta, këmisha, polo, pantallona chino). Ju lutemi shmangni të bardhën, ngjyrën fildish ose nuanca të ngjashme.";
       durationLabel = "Kohëzgjatja";
       duration = "Rreth 2-3 orë";
     }
 
     if (language.code === "es") {
-      dressCodeLabel = "Vestimenta";
-      dressCode = "Smart casual";
+      dressCodeLabel = "Código de vestimenta";
+      dressCode =
+        "Smart casual — atuendos de verano apropiados para una bodega (vestidos fluidos o midi, telas ligeras, camisas, polos, chinos). Por favor, eviten el blanco, marfil o tonos similares.";
       durationLabel = "Duración";
       duration = "Aproximadamente 2-3 horas";
     }
