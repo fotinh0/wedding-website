@@ -28,7 +28,7 @@ const rsvpTranslations = {
     submitErrorMessage:
       "There was an error submitting your response. Please try again or contact us if the problem persists.",
     disclaimerText:
-      "Due to the intimate nature of our celebration, attendance is limited to the guests listed on your invitation.",
+      "Due to the intimate nature of our celebration, attendance is limited to the guests listed on your invitation. Please note that this will be an adults-only celebration and children will not be in attendance.",
   },
 
   es: {
@@ -96,7 +96,7 @@ const rsvpTranslations = {
     submitErrorMessage:
       "Ndodhi një gabim gjatë dërgimit të përgjigjes. Ju lutemi provoni përsëri ose na kontaktoni nëse problemi vazhdon.",
     disclaimerText:
-      "Për shkak të natyrës intime të festimit tonë, pjesëmarrja është e kufizuar vetëm për të ftuarit e listuar në ftesën tuaj.",
+      "Për shkak të natyrës intime të festimit tonë, pjesëmarrja është e kufizuar për të ftuarit e listuar në ftesën tuaj. Ju lutemi vini re se kjo do të jetë një festë vetëm për të rritur dhe fëmijët nuk do të jenë të pranishëm.",
   },
 };
 
