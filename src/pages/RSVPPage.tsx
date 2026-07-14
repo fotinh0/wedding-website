@@ -150,18 +150,18 @@ export default function RSVPPage({ language }: RSVPPageProps) {
           <p className="text-[40px] sm:text-7xl font-light mb-8 text-gray-900">
             {t.title}
           </p>
-          <p className="text-lg sm:text-xl text-gray-600 font-light tracking-wide mx-auto max-w-xl">
+          {/* <p className="text-lg sm:text-xl text-gray-600 font-light tracking-wide mx-auto max-w-xl">
             {t.intro}
           </p>
           <p className="text-lg sm:text-xl text-gray-600 font-light tracking-wide mx-auto mb-4">
             {t.introTwo}
-          </p>
+          </p> */}
           <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed max-w-md mx-auto">
             {t.deadlineText}
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12 opacity-50 pointer-events-none">
           <form onSubmit={handleSubmit} className="space-y-7">
             {/* Name Field */}
             <div className="group">

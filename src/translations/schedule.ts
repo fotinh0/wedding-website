@@ -10,7 +10,7 @@ export const scheduleTranslations = {
         time: "Friday evening",
         event: "Welcome Event",
         detail:
-          "The welcome gathering will take place at Kantina & Ferma Dukat, approximately 30 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
+          "The welcome gathering will take place at Fig and Olive in Himarë, approximately 30-40 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
         isEvent: true,
         hideTime: false,
       },
@@ -65,7 +65,7 @@ export const scheduleTranslations = {
         badge: "Friday",
         heading: "Welcome Event",
         body: [
-          "The welcome gathering will take place at Kantina & Ferma Dukat, approximately 30 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
+          "The welcome gathering will take place at Fig and Olive in Himarë, approximately 30-40 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
         ],
       },
       {
@@ -95,6 +95,7 @@ export const scheduleTranslations = {
       "Classic tuxedos and suits with a formal tie or bow tie are encouraged. Please avoid white or off-white suits or jackets, as these colors are reserved for the couple.",
     optionalLabel: "Optional",
     hairAndMakeupLabel: "Hair & Makeup",
+    registryLabel: "Registry",
   },
 
   sq: {
@@ -108,7 +109,7 @@ export const scheduleTranslations = {
         time: "E premte në mbrëmje",
         event: "Eventi i mirëseardhjes",
         detail:
-          "Takimi i mirëseardhjes do të zhvillohet në Kantina & Ferma Dukat, rreth 30 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
+          "Takimi i mirëseardhjes do të zhvillohet në Fig and Olive ne Himarë, rreth 30-40 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
         isEvent: true,
         hideTime: false,
       },
@@ -163,7 +164,7 @@ export const scheduleTranslations = {
         badge: "E premte",
         heading: "Eventi i mirëseardhjes",
         body: [
-          "Takimi i mirëseardhjes do të zhvillohet në Kantina & Ferma Dukat, rreth 30 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
+          "Takimi i mirëseardhjes do të zhvillohet në Fig and Olive në Himarë, rreth 30-40 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
         ],
       },
       {
@@ -193,6 +194,7 @@ export const scheduleTranslations = {
       "Rekomandohen tuxedo ose kostume klasikë me kravatë ose papion. Ju lutemi shmangni kostumet ose xhaketat e bardha, pasi këto ngjyra janë të rezervuara për çiftin.",
     optionalLabel: "Opsionale",
     hairAndMakeupLabel: "Flokë & Makeup",
+    registryLabel: "Lista e dhuratave",
   },
 
   es: {
@@ -206,7 +208,7 @@ export const scheduleTranslations = {
         time: "Viernes por la tarde",
         event: "Evento de bienvenida",
         detail:
-          "La reunión de bienvenida se llevará a cabo en Kantina & Ferma Dukat, aproximadamente a 30 minutos de Zoe Hora. Una velada relajada para conectar antes del día de la boda.",
+          "La reunión de bienvenida se llevará a cabo en Fig and Olive en Himarë, aproximadamente a 30-40 minutos de Zoe Hora. Una velada relajada para conectar antes del día de la boda.",
         isEvent: true,
         hideTime: false,
       },
@@ -262,7 +264,7 @@ export const scheduleTranslations = {
         badge: "Viernes",
         heading: "Evento de bienvenida",
         body: [
-          "La reunión de bienvenida se llevará a cabo en Kantina & Ferma Dukat, aproximadamente a 30 minutos de Zoe Hora. Una velada relajada para conectar antes del día de la boda.",
+          "La reunión de bienvenida se llevará a cabo en Fig and Olive en Himarë, aproximadamente a 30-40 minutos de Zoe Hora. Una velada relajada para conectar antes del día de la boda.",
         ],
       },
       {
@@ -292,6 +294,7 @@ export const scheduleTranslations = {
       "Se recomiendan esmóquines clásicos y trajes elegantes con corbata o corbatín. Por favor, eviten trajes o chaquetas blancas o en tonos similares, ya que estos colores están reservados para la pareja.",
     optionalLabel: "Opcional",
     hairAndMakeupLabel: "Peluquería y Maquillaje",
+    registryLabel: "Lista de regalos",
   },
 };
 

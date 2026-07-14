@@ -7,6 +7,7 @@ import type { Language } from "../types";
 import women from "../assets/Women.png";
 import men from "../assets/Men.png";
 import { useState } from "react";
+import faqTranslations from "../translations/faq";
 
 export default function SchedulePage({
   language,
@@ -17,6 +18,7 @@ export default function SchedulePage({
 }) {
   const t = scheduleTranslations[language.code];
   const tHome = homepageTranslations[language.code];
+  const tFaq = faqTranslations[language.code];
 
   const [openWomen, setOpenWomen] = useState(false);
   const [openMen, setOpenMen] = useState(false);
@@ -24,14 +26,14 @@ export default function SchedulePage({
   const getWelcomePartyDetails = () => {
     let dressCodeLabel = "Dress code";
     let dressCode =
-      "Smart casual — summer attire suited for a winery (flowy or midi dresses, lightweight fabrics, button-downs, polos, chino pants). Please avoid white, ivory, or similar shades.";
+      "Smart casual — summer attire suited for a scenic coastal setting (flowy or midi dresses, lightweight fabrics, button-downs, polos, chino pants). Please avoid white, ivory, or similar shades.";
     let durationLabel = "Duration";
     let duration = "Approximately 2-3 hours";
 
     if (language.code === "sq") {
       dressCodeLabel = "Kodi i veshjes";
       dressCode =
-        "Smart casual — veshje verore të përshtatshme për një kantinë (fustane të rrjedhshme ose midi, materiale të lehta, këmisha, polo, pantallona chino). Ju lutemi shmangni të bardhën, ngjyrën fildish ose nuanca të ngjashme.";
+        "Smart casual — veshje verore të përshtatshme për një ambient bregdetar me pamje panoramike (fustane të rrjedhshme ose midi, materiale të lehta, këmisha, polo, pantallona chino). Ju lutemi shmangni të bardhën, ngjyrën fildish ose nuanca të ngjashme.";
       durationLabel = "Kohëzgjatja";
       duration = "Rreth 2-3 orë";
     }
@@ -39,7 +41,7 @@ export default function SchedulePage({
     if (language.code === "es") {
       dressCodeLabel = "Código de vestimenta";
       dressCode =
-        "Smart casual — atuendos de verano apropiados para una bodega (vestidos fluidos o midi, telas ligeras, camisas, polos, chinos). Por favor, eviten el blanco, marfil o tonos similares.";
+        "Smart casual — atuendos de verano apropiados para un entorno costero con vistas panorámicas (vestidos fluidos o midi, telas ligeras, camisas, polos, chinos). Por favor, eviten el blanco, marfil o tonos similares.";
       durationLabel = "Duración";
       duration = "Aproximadamente 2-3 horas";
     }
@@ -137,6 +139,105 @@ export default function SchedulePage({
           the day to allow time for travel. Guests should plan to arrive around
           4:30 PM, with final timing to be shared closer to the date. Guests are
           welcome to explore other artists as well.
+        </p>
+      </div>
+    );
+  };
+
+  const registryDetails = () => {
+    const VENMO = "https://venmo.com/u/Foti-Ceci";
+    const PAYPAL = "https://www.paypal.me/FotiCeci";
+
+    if (language.code === "sq") {
+      return (
+        <div>
+          <p className="text-sm text-gray-500 leading-relaxed mb-4">
+            {tFaq.faqs[tFaq.faqs.length - 1].answer}
+          </p>
+          <p>
+            Venmo:{" "}
+            <a
+              href={VENMO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @Foti-Ceci
+            </a>
+          </p>
+          <p>
+            PayPal:{" "}
+            <a
+              href={PAYPAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @FotiCeci
+            </a>
+          </p>
+        </div>
+      );
+    }
+
+    if (language.code === "es") {
+      return (
+        <div>
+          <p className="text-sm text-gray-500 leading-relaxed mb-4">
+            {tFaq.faqs[tFaq.faqs.length - 1].answer}
+          </p>
+          <p>
+            Venmo:{" "}
+            <a
+              href={VENMO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @Foti-Ceci
+            </a>
+          </p>
+          <p>
+            PayPal:{" "}
+            <a
+              href={PAYPAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300"
+            >
+              @FotiCeci
+            </a>
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <p className="text-sm text-gray-500 leading-relaxed mb-4">
+          {tFaq.faqs[tFaq.faqs.length - 1].answer}
+        </p>
+        <p>
+          Venmo:{" "}
+          <a
+            href={VENMO}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300"
+          >
+            @Foti-Ceci
+          </a>
+        </p>
+        <p>
+          PayPal:{" "}
+          <a
+            href={PAYPAL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300"
+          >
+            @FotiCeci
+          </a>
         </p>
       </div>
     );
@@ -310,14 +411,22 @@ export default function SchedulePage({
       {/* ── Divider ── */}
       <hr className="border-t border-gray-300 mb-16 mx-8 sm:mb-20 sm:max-w-6xl sm:mx-auto sm:hidden" />
 
-      <div id="hair-and-makeup" className="max-w-5xl mx-auto px-8 pb-16">
+      <div id="optional-section" className="max-w-5xl mx-auto px-8 pb-16">
         <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-400 mb-2">
           {t.optionalLabel}
         </p>
-        <p className="text-2xl sm:text-3xl font-normal mb-8">
-          {t.hairAndMakeupLabel}
-        </p>
-        {getMakeupDetails()}
+        <div id="hair-and-makeup">
+          <p className="text-2xl sm:text-3xl font-normal mb-8">
+            {t.hairAndMakeupLabel}
+          </p>
+          {getMakeupDetails()}
+        </div>
+        <div id="registry" className="mt-12">
+          <p className="text-2xl sm:text-3xl font-normal mb-8">
+            {t.registryLabel}
+          </p>
+          {registryDetails()}
+        </div>
       </div>
 
       {/* ── Lightboxes ── */}

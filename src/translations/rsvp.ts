@@ -3,7 +3,8 @@ const rsvpTranslations = {
     title: "RSVP",
     intro: "We are so excited to celebrate with you.",
     introTwo: "Please confirm your attendance by completing the form below.",
-    deadlineText: "Kindly respond by June 1st, 2026",
+    deadlineText:
+      "RSVPs are now closed. We look forward to celebrating with you soon.",
     nameLabel: "Name(s) of invited guest(s)",
     nameHelperText: "Please enter the names as listed on your invitation.",
     phoneLabel: "Phone number",
@@ -36,7 +37,8 @@ const rsvpTranslations = {
     intro: "Estamos muy emocionados de celebrar con ustedes.",
     introTwo:
       "Por favor, confirme su asistencia completando el formulario a continuación.",
-    deadlineText: "Responda antes del 1 de junio de 2026",
+    deadlineText:
+      "Las confirmaciones de asistencia (RSVP) ya están cerradas. Esperamos celebrar con ustedes muy pronto.",
     nameLabel: "Nombre(s) de los invitado(s)",
     nameHelperText:
       "Por favor, ingrese los nombres tal como aparecen en su invitación.",
@@ -71,7 +73,8 @@ const rsvpTranslations = {
     intro: "Jemi shumë të emocionuar të festojmë me ju.",
     introTwo:
       "Ju lutemi konfirmoni pjesëmarrjen tuaj duke plotësuar formularin më poshtë.",
-    deadlineText: "Përgjigjuni para 1 qershor 2026",
+    deadlineText:
+      "Konfirmimet e pjesëmarrjes (RSVP) janë mbyllur. Mezi presim të festojmë së shpejti me ju.",
     nameLabel: "Emri(t) e të ftuarve",
     nameHelperText: "Ju lutemi shkruani emrat ashtu siç janë në ftesën tuaj.",
     phoneLabel: "Numri i telefonit",
