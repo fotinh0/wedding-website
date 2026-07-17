@@ -8,7 +8,7 @@ export default function WeddingCountdown({
   code: Lang;
   translation: HomepageTranslationContent;
 }) {
-  const [weddingDate] = useState(new Date("2026-08-01T15:00:00"));
+  const [weddingDate] = useState(new Date("2026-08-01T11:00:00"));
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,

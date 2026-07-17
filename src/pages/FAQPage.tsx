@@ -5,6 +5,8 @@ import faqTranslations from "../translations/faq";
 export default function FAQPage({ language }: { language: Language }) {
   const [openStates, setOpenStates] = useState<Record<number, boolean>>({});
   const t = faqTranslations[language.code];
+  const VENMO = "https://venmo.com/u/Foti-Ceci";
+  const PAYPAL = "https://www.paypal.me/FotiCeci";
 
   const toggleAccordion = (index: number) => {
     setOpenStates((prev) => ({
@@ -39,6 +41,32 @@ export default function FAQPage({ language }: { language: Language }) {
             {openStates[index] && (
               <div className="pb-6 sm:pr-8 text-sm md:text-base text-gray-600 font-light leading-relaxed">
                 {faq.answer}
+                {t.faqs?.length - 1 === index && (
+                  <div className="mt-2">
+                    <p>
+                      Venmo:{" "}
+                      <a
+                        href={VENMO}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-300"
+                      >
+                        @Foti-Ceci
+                      </a>
+                    </p>
+                    <p>
+                      PayPal:{" "}
+                      <a
+                        href={PAYPAL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-300"
+                      >
+                        @FotiCeci
+                      </a>
+                    </p>
+                  </div>
+                )}
               </div>
             )}
           </div>
