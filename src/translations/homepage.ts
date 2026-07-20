@@ -16,7 +16,7 @@ const homepageTranslations = {
     date: "August 1, 2026",
     date2: "08/01/26",
     saveTheDateText: "Save the date — August 1, 2026",
-    RSVPCTAText: "RSVP by June 1, 2026",
+    RSVPCTAText: "JULY 31 • AUGUST 1, 2026",
     days: "DAYS",
     hours: "HOURS",
     minutes: "MINUTES",

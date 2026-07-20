@@ -23,6 +23,36 @@ export default function SchedulePage({
   const [openWomen, setOpenWomen] = useState(false);
   const [openMen, setOpenMen] = useState(false);
 
+  const renderTextWithLocationLink = (text: string) => {
+    const locationLabel = "Fig and Olive";
+    const mapUrl = "https://maps.app.goo.gl/RTJ2HEnkDcVvmejm9";
+    const parts = text.split(locationLabel);
+
+    if (parts.length <= 1) {
+      return text;
+    }
+
+    return (
+      <>
+        {parts.map((part, index) => (
+          <span key={`${part}-${index}`}>
+            {index > 0 && (
+              <a
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-gray-400 underline-offset-2 transition-colors hover:text-gray-700"
+              >
+                {locationLabel}
+              </a>
+            )}
+            {part}
+          </span>
+        ))}
+      </>
+    );
+  };
+
   const getWelcomePartyDetails = () => {
     let dressCodeLabel = "Dress code";
     let dressCode =
@@ -344,7 +374,7 @@ export default function SchedulePage({
                       key={j}
                       className="text-sm text-gray-500 leading-relaxed"
                     >
-                      {p}
+                      {renderTextWithLocationLink(p)}
                     </p>
                   ))}
                   {i === 0 && getWelcomePartyDetails()}
