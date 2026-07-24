@@ -321,7 +321,7 @@ export default function SchedulePage({
                     {/* Dot */}
                     <span
                       className={`absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full border ${
-                        i === 0
+                        i === 0 || i === 1
                           ? "bg-gray-800 border-gray-800"
                           : "bg-white border-gray-400"
                       }`}
