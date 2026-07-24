@@ -326,14 +326,20 @@ export default function SchedulePage({
                           : "bg-white border-gray-400"
                       }`}
                     />
-                    {!item.hideTime && (
+                    {!item.hideDate && (
                       <p className="text-xs sm:text-sm tracking-[0.15em] uppercase text-gray-500 mb-1">
-                        {item.time}
+                        {item.date}
                       </p>
                     )}
+
                     <p className="italic text-base sm:text-lg mb-0.5">
                       {item.event}
                     </p>
+                    {item.time && (
+                      <span className="text-sm tracking-[0.15em] uppercase text-gray-600 ml-1">
+                        {item.time}
+                      </span>
+                    )}
                   </li>
                 ) : (
                   <li key={i} className="pl-6 relative">

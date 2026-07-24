@@ -1,4 +1,45 @@
-export const scheduleTranslations = {
+interface TimelineItem {
+  date: string;
+  event: string;
+  time?: string;
+  detail: string;
+  isEvent: boolean;
+  hideDate: boolean;
+}
+
+interface ScheduleTranslation {
+  title: string;
+  intro: string;
+  scheduleLabel: string;
+  timelineLabel: string;
+  timeline: TimelineItem[];
+  timelineDisclaimer: string;
+  whatToExpectLabel: string;
+  infromationLabel: string;
+  info: {
+    badge: string;
+    heading: string;
+    body: string[];
+  }[];
+  dressCodeLabel: string;
+  weddingAttireLabel: string;
+  weddingAttireText: string;
+  womenAttireLabel: string;
+  womenAttireText: string;
+  menAttireLabel: string;
+  menAttireText: string;
+  optionalLabel: string;
+  hairAndMakeupLabel: string;
+  registryLabel: string;
+}
+
+interface ScheduleTranslations {
+  en: ScheduleTranslation;
+  sq: ScheduleTranslation;
+  es: ScheduleTranslation;
+}
+
+export const scheduleTranslations: ScheduleTranslations = {
   en: {
     title: "Wedding Weekend Details",
     intro:
@@ -7,65 +48,72 @@ export const scheduleTranslations = {
     timelineLabel: "Timeline",
     timeline: [
       {
-        time: "Friday evening",
-        event: "Welcome Event",
+        date: "Friday, July 31",
+        event: "Welcome Dinner",
+        time: "7:00 PM",
         detail:
           "The welcome gathering will take place at Fig and Olive in Himarë, approximately 30-40 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       // {
-      //   time: "",
+      //   date: "",
       //   event: "Saturday, August 1, 2026",
       //   detail: "",
       //   isEvent: false,
-      //   hideTime: true,
+      //   hideDate: true,
       // },
       {
-        time: "Saturday",
+        date: "Saturday, August 1",
         event: "Guest Arrival",
+        time: "5:00 PM",
         detail: "Zoe Hora, Dhërmi — guests seated 30 min prior",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       {
-        time: "Saturday, TBD",
+        date: "Saturday",
+        time: "5:30 PM",
         event: "Ceremony",
         detail: "Zoe Hora, Dhërmi — guests seated 30 min prior",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Saturday, TBD",
+        date: "Saturday, TBD",
+        time: "6:00 PM",
         event: "Cocktail Hour",
         detail: "Garden terrace, Zoe Hora",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Saturday, TBD",
+        date: "Saturday, TBD",
+        time: "7:30 PM",
         event: "Dinner & Reception",
         detail: "Dining, toasts, and dancing",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Late night",
+        date: "Late night",
         event: "After Party",
+        time: "12:00 AM - 3:00 AM",
         detail: "Music, drinks & dancing for those who want to continue",
         isEvent: true,
-        hideTime: false,
+        hideDate: true,
       },
     ],
-    timelineDisclaimer: "Exact timing will be shared closer to the date.",
+    timelineDisclaimer:
+      "To ensure everyone is seated before the ceremony begins, we kindly ask that guests arrive by 5:00 PM. The ceremony will begin at 5:30 PM sharp.",
     whatToExpectLabel: "What to Expect",
     infromationLabel: "Information",
     info: [
       {
         badge: "Friday",
-        heading: "Welcome Event",
+        heading: "Welcome Dinner",
         body: [
-          "The welcome gathering will take place at Fig and Olive in Himarë, approximately 30-40 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
+          "The welcome dinner will take place at Fig and Olive in Himarë, approximately 30-40 minutes from Zoe Hora. A relaxed evening to connect ahead of the wedding day.",
         ],
       },
       {
@@ -106,63 +154,71 @@ export const scheduleTranslations = {
     timelineLabel: "Kronologjia",
     timeline: [
       {
-        time: "E premte në mbrëmje",
-        event: "Eventi i mirëseardhjes",
+        date: "E premte, 31 Korrik",
+        event: "Darka e mirëseardhjes",
+        time: "7:00 PM",
         detail:
           "Takimi i mirëseardhjes do të zhvillohet në Fig and Olive ne Himarë, rreth 30-40 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       // {
-      //   time: "",
+      //   date: "",
       //   event: "E Shtune, 1 Gusht, 2026",
       //   detail: "",
       //   isEvent: false,
-      //   hideTime: true,
+      //   hideDate: true,
       // },
       {
-        time: "E shtunë",
+        date: "E shtunë, 1 gusht",
         event: "Ardhja e të ftuarve",
+        time: "17:00",
         detail: "Zoe Hora, Dhërmi — të ftuarit ulen 30 minuta më herët",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       {
-        time: "E shtunë, për t’u konfirmuar",
+        date: "E shtunë, për t’u konfirmuar",
         event: "Ceremonia",
+        time: "17:30",
         detail: "Zoe Hora, Dhërmi — të ftuarit ulen 30 minuta më herët",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "E shtunë, për t’u konfirmuar",
+        date: "E shtunë, për t’u konfirmuar",
+        time: "18:00",
         event: "Hora e koktejit",
         detail: "Tarraca e kopshtit, Zoe Hora",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "E shtunë, për t’u konfirmuar",
+        date: "E shtunë, për t’u konfirmuar",
+        time: "19:30",
         event: "Recepsioni & Festimi",
+
         detail: "Ushqim, dolli dhe kërcim",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Natën vonë",
+        date: "Natën vonë",
         event: "After Party",
+        time: "00:00 - 3:00",
         detail: "Muzikë, pije dhe kërcim për ata që duan të vazhdojnë",
         isEvent: true,
-        hideTime: false,
+        hideDate: true,
       },
     ],
-    timelineDisclaimer: "Orari i saktë do të ndahet më afër datës.",
+    timelineDisclaimer:
+      "Për t'u siguruar që të gjithë të jenë ulur përpara fillimit të ceremonisë, ju lutemi të mbërrini deri në orën 17:00. Ceremonia do të fillojë saktësisht në orën 17:30.",
     whatToExpectLabel: "Çfarë të prisni",
     infromationLabel: "Informacion",
     info: [
       {
         badge: "E premte",
-        heading: "Eventi i mirëseardhjes",
+        heading: "Darka e mirëseardhjes",
         body: [
           "Takimi i mirëseardhjes do të zhvillohet në Fig and Olive në Himarë, rreth 30-40 minuta nga Zoe Hora. Një mbrëmje e qetë për t’u njohur përpara ditës së dasmës.",
         ],
@@ -205,58 +261,64 @@ export const scheduleTranslations = {
     timelineLabel: "Itinerario",
     timeline: [
       {
-        time: "Viernes por la tarde",
+        date: "Viernes, 31 de julio",
         event: "Evento de bienvenida",
+        time: "7:00 PM",
         detail:
           "La reunión de bienvenida se llevará a cabo en Fig and Olive en Himarë, aproximadamente a 30-40 minutos de Zoe Hora. Una velada relajada para conectar antes del día de la boda.",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       // {
-      //   time: "",
+      //   date: "",
       //   event: "Sábado, Agosto 1, 2026",
       //   detail: "",
       //   isEvent: false,
-      //   hideTime: true,
+      //   hideDate: true,
       // },
       {
-        time: "Sábado",
+        date: "Sábado, 1 de agosto",
+        time: "5:00 PM",
         event: "Llegada de invitados",
         detail: "Zoe Hora, Dhërmi — invitados sentados 30 minutos antes",
         isEvent: true,
-        hideTime: false,
+        hideDate: false,
       },
       {
-        time: "Sábado",
+        date: "Sábado",
         event: "Ceremonia",
+        time: "5:30 PM",
         detail: "Zoe Hora, Dhërmi — invitados sentados 30 minutos antes",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Sábado",
+        date: "Sábado",
         event: "Cóctel",
+        time: "6:00 PM",
         detail: "Terraza del jardín, Zoe Hora",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Sábado",
+        date: "Sábado",
         event: "Cena y recepción",
+        time: "7:30 PM",
         detail: "Cena, brindis y baile",
         isEvent: true,
-        hideTime: true,
+        hideDate: true,
       },
       {
-        time: "Tarde en la noche",
+        date: "Tarde en la noche",
+        time: "12:00 AM - 3:00 AM",
         event: "After Party",
         detail: "Música, bebidas y baile para quienes deseen continuar",
         isEvent: true,
-        hideTime: false,
+        hideDate: true,
       },
     ],
     timelineDisclaimer:
-      "El horario exacto se compartirá más cerca de la fecha.",
+      "Para asegurarnos de que todos estén sentados antes de que comience la ceremonia, les pedimos amablemente que lleguen a las 5:00 p.m. La ceremonia comenzará puntualmente a las 5:30 p.m.",
     whatToExpectLabel: "Qué esperar",
     infromationLabel: "Información",
     info: [
