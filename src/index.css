@@ -1,17 +1,88 @@
 @import 'tailwindcss';
 
+/* Warm "paper & ink" palette. Remapping white/black/zinc/gray keeps every
+   existing class working while softening the whole site. */
+@theme {
+  --color-white: #faf7f2;
+  --color-black: #2b2622;
+  --color-zinc-50: #f1ece3;
+  --color-gray-100: #ece6dc;
+  --color-gray-200: #e2dace;
+  --color-gray-500: #8a8075;
+  --color-gray-700: #4a423b;
+  --color-gold: #b39b72;
+  --color-paper: #faf7f2;
+  --color-ink: #2b2622;
+  --color-stone: #f1ece3;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-sans: 'Cormorant Garamond', Georgia, serif;
+}
+
 @layer base {
+  html { background: var(--color-paper); }
   body {
-    font-family: 'Playfair Display', 'Libre Baskerville', 'Cormorant Garamond',
-      sans-serif;
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-
-  h1,
-  h2 {
-    font-family: 'Pinyon Script', serif;
-  }
+  h1, h2 { font-family: var(--font-script); font-weight: 400; }
+  h3 { font-family: var(--font-serif); font-weight: 400; }
+  ::selection { background: color-mix(in srgb, var(--color-gold) 30%, transparent); }
 }
 
-.word-spacing-4 {
-  word-spacing: 2px;
+/* Faint paper grain */
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 60;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+@utility eyebrow {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+}
+
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: ''; position: absolute; left: 50%; right: 50%; bottom: -4px;
+    height: 1px; background: var(--color-gold);
+    transition: left .4s ease, right .4s ease;
+  }
+  &:hover::after, &[aria-current='page']::after { left: 0; right: 0; }
+}
+
+@utility btn-outline {
+  display: inline-block;
+  border: 1px solid var(--color-ink);
+  padding: 0.9rem 2.5rem;
+  font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  transition: background .4s ease, color .4s ease;
+  &:hover { background: var(--color-ink); color: var(--color-paper); }
+}
+
+@utility fade-up {
+  animation: fade-up 0.9s cubic-bezier(.2,.6,.2,1) both;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+}
+
+.word-spacing-4 { word-spacing: 2px; }

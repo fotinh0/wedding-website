@@ -11,6 +11,7 @@ import kissing from "../assets/kissing.jpg";
 import hugging from "../assets/hugging.jpg";
 import standing from "../assets/standing.jpg";
 import CTABanner from "../components/CTABanner";
+import Ornament from "../components/Ornament";
 
 interface HomePageProps {
   language: Language;
@@ -23,11 +24,11 @@ export default function HomePage({
 }: HomePageProps) {
   const t = homepageTranslations[language.code];
 
-  const [speed, setSpeed] = useState(150);
+  const [speed, setSpeed] = useState(35);
 
   useEffect(() => {
     const updateSpeed = () => {
-      if (window.innerWidth < 640) setSpeed(100);
+      if (window.innerWidth < 640) setSpeed(25);
     };
 
     updateSpeed();
@@ -49,16 +50,17 @@ export default function HomePage({
       />
       <div className="relative overflow-hidden">
         {/* Overlay text */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-white bg-black/5">
-          <h2 className="text-6xl sm:text-8xl mb-2 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-white bg-gradient-to-b from-transparent via-black/10 to-black/40">
+          <h2 className="text-6xl sm:text-8xl mb-6 text-center fade-up drop-shadow-sm">
             {t?.overlay}
           </h2>
+          <span className="eyebrow !text-white/90 fade-up">Dhërmi · Albania</span>
         </div>
         <div
-          className="sm:hidden absolute bottom-9 left-1/2 transform -translate-x-1/2 z-20 animate-bounce"
+          className="sm:hidden absolute bottom-9 left-1/2 transform -translate-x-1/2 z-20 animate-pulse"
           onClick={() => scrollToSection("welcome")}
         >
-          <ChevronDown size={40} color="white" />
+          <ChevronDown size={28} strokeWidth={1} color="white" />
         </div>
         <Marquee speed={speed}>
           {[
@@ -84,22 +86,23 @@ export default function HomePage({
       {/* Welcome section  */}
       <div
         id="welcome"
-        className="max-w-4xl mx-auto px-4 pt-12 py-24 text-center"
+        className="max-w-3xl mx-auto px-6 pt-16 pb-28 sm:pb-36 text-center fade-up"
       >
         <img src={logo3} alt="Wedding Logo" className="h-45 w-auto mx-auto" />
-        <p className="text-lg leading-relaxed font-light sm:w-2xl mx-auto ">
+        <p className="text-xl leading-[1.9] font-light max-w-[34rem] mx-auto">
           {t.welcome}
         </p>
-        <br />
-        <p className="text-lg leading-relaxed font-light sm:w-2xl mx-auto ">
+        <Ornament className="my-10" />
+        <p className="text-xl leading-[1.9] font-light max-w-[34rem] mx-auto">
           {t.details}
         </p>
       </div>
 
       {/* Our Story */}
-      <div className="bg-zinc-50">
-        <div className="max-w-4xl mx-auto py-24 text-center">
-          <h2 className="text-[50px] sm:text-7xl mb-12 text-center">
+      <div className="bg-stone">
+        <div className="max-w-4xl mx-auto px-4 py-28 sm:py-36 text-center">
+          <Ornament className="mb-6" />
+          <h2 className="text-[50px] sm:text-7xl mb-16 text-center">
             {t.story}
           </h2>
 
@@ -107,22 +110,22 @@ export default function HomePage({
             {/* How We Met */}
             <div className="flex flex-col sm:flex-row items-center">
               <div className="sm:w-1/2 p-8 flex items-center justify-center">
-                <h3 className="text-3xl  italic">{t.howWeMet}</h3>
+                <h3 className="text-3xl sm:text-4xl italic font-light">{t.howWeMet}</h3>
               </div>
-              <div className="h-px w-[70%] mx-auto bg-gray-700 sm:h-50 sm:w-px sm:text-center"></div>
+              <div className="h-px w-24 mx-auto bg-gold/70 sm:h-40 sm:w-px"></div>
               <div className="sm:w-1/2 p-8 text-left">
-                <p className="text-lg leading-relaxed ">{t.howWeMetText}</p>
+                <p className="text-lg leading-[1.9] max-w-md">{t.howWeMetText}</p>
               </div>
             </div>
 
             {/* The Proposal */}
             <div className="flex flex-col sm:flex-row items-center">
               <div className="sm:w-1/2 p-8 flex items-center justify-center">
-                <h3 className="text-3xl  italic">{t.proposal}</h3>
+                <h3 className="text-3xl sm:text-4xl italic font-light">{t.proposal}</h3>
               </div>
-              <div className="h-px w-[70%] mx-auto bg-gray-700 sm:h-50 sm:w-px sm:text-center"></div>
+              <div className="h-px w-24 mx-auto bg-gold/70 sm:h-40 sm:w-px"></div>
               <div className="sm:w-1/2 p-8 text-left">
-                <p className="text-lg leading-relaxed ">{t.proposalText}</p>
+                <p className="text-lg leading-[1.9] max-w-md">{t.proposalText}</p>
               </div>
             </div>
           </div>
@@ -130,10 +133,11 @@ export default function HomePage({
       </div>
 
       {/* Details & RSVP CTA */}
-      <div className="max-w-4xl mx-auto px-4 py-24 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-28 sm:py-36 text-center">
+        <p className="eyebrow mb-6">Save the date</p>
         <div className="flex justify-around flex-col sm:flex-row-reverse">
           <div>
-            <p className="text-5xl font-light italic">{t.date}</p>
+            <p className="text-5xl sm:text-6xl font-light italic">{t.date}</p>
           </div>
         </div>
         <Countdown code={language.code} translation={t} />

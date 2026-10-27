@@ -23,7 +23,7 @@ export default function Navigation({
 
   return (
     <>
-      <nav className="w-full z-50 bg-white/98 backdrop-blur-sm">
+      <nav className="w-full z-50 bg-white/95 backdrop-blur-sm">
         <div className="max-w-7xl px-4 pt-2 sm:px-6 lg:px-8 w-full mx-auto">
           {createPortal(
             <div className="block absolute top-2 right-4 sm:top-4 sm:right-10 z-50">
@@ -47,9 +47,8 @@ export default function Navigation({
                 <button
                   key={item.href}
                   onClick={() => onNavigate(item.href)}
-                  className={`text-sm uppercase transition-colors text-black cursor-pointer hover:border-b hover:border-black ${
-                    currentPage === item.href ? "border-b border-black" : ""
-                  }`}
+                  aria-current={currentPage === item.href ? "page" : undefined}
+                  className="link-underline text-[0.8rem] uppercase tracking-[0.3em] text-black cursor-pointer"
                 >
                   {item.name}
                 </button>
@@ -74,9 +73,9 @@ export default function Navigation({
                     onNavigate(item.href);
                     setIsOpen(false);
                   }}
-                  className={`block w-full text-left px-4 py-3 rounded-lg transition-colors font-sans text-sm uppercase tracking-wider ${
+                  className={`block w-full text-left px-4 py-3 rounded-lg transition-colors text-sm uppercase tracking-[0.25em] ${
                     currentPage === item.href
-                      ? "bg-black text-white"
+                      ? "bg-stone text-black"
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
