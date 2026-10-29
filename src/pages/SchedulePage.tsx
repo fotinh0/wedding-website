@@ -99,7 +99,7 @@ export default function SchedulePage({
               href="https://www.instagram.com/markussramaj/?__d=dist"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @markussramaj
             </a>
@@ -128,7 +128,7 @@ export default function SchedulePage({
               href="https://www.instagram.com/markussramaj/?__d=dist"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @markussramaj
             </a>
@@ -156,7 +156,7 @@ export default function SchedulePage({
             href="https://www.instagram.com/markussramaj/?__d=dist"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300"
+            className="text-gray-500 underline underline-offset-4 hover:text-black"
           >
             @markussramaj
           </a>
@@ -190,7 +190,7 @@ export default function SchedulePage({
               href={VENMO}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @Foti-Ceci
             </a>
@@ -201,7 +201,7 @@ export default function SchedulePage({
               href={PAYPAL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @FotiCeci
             </a>
@@ -222,7 +222,7 @@ export default function SchedulePage({
               href={VENMO}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @Foti-Ceci
             </a>
@@ -233,7 +233,7 @@ export default function SchedulePage({
               href={PAYPAL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300"
+              className="text-gray-500 underline underline-offset-4 hover:text-black"
             >
               @FotiCeci
             </a>
@@ -253,7 +253,7 @@ export default function SchedulePage({
             href={VENMO}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300"
+            className="text-gray-500 underline underline-offset-4 hover:text-black"
           >
             @Foti-Ceci
           </a>
@@ -264,7 +264,7 @@ export default function SchedulePage({
             href={PAYPAL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300"
+            className="text-gray-500 underline underline-offset-4 hover:text-black"
           >
             @FotiCeci
           </a>

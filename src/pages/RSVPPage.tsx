@@ -161,7 +161,11 @@ export default function RSVPPage({ language }: RSVPPageProps) {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12 opacity-50 pointer-events-none">
+        <div className="relative bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12 opacity-50">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 cursor-not-allowed"
+          />
           <form onSubmit={handleSubmit} className="space-y-7">
             {/* Name Field */}
             <div className="group">

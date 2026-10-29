@@ -1,19 +1,25 @@
 @import 'tailwindcss';
 
-/* Warm "paper & ink" palette. Remapping white/black/zinc/gray keeps every
-   existing class working while softening the whole site. */
+/* Monochrome palette. Remapping white/black/zinc/gray to true neutrals
+   keeps every existing class working with no color cast. */
 @theme {
-  --color-white: #faf7f2;
-  --color-black: #2b2622;
-  --color-zinc-50: #f1ece3;
-  --color-gray-100: #ece6dc;
-  --color-gray-200: #e2dace;
-  --color-gray-500: #8a8075;
-  --color-gray-700: #4a423b;
-  --color-gold: #b39b72;
-  --color-paper: #faf7f2;
-  --color-ink: #2b2622;
-  --color-stone: #f1ece3;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-zinc-50: #f4f4f4;
+  --color-gray-50: #f7f7f7;
+  --color-gray-100: #ededed;
+  --color-gray-200: #dddddd;
+  --color-gray-300: #c4c4c4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #7a7a7a;
+  --color-gray-600: #5c5c5c;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-gold: #8c8c8c;
+  --color-paper: #ffffff;
+  --color-ink: #111111;
+  --color-stone: #f4f4f4;
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-script: 'Pinyon Script', cursive;

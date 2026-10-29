@@ -49,7 +49,7 @@ export default function FAQPage({ language }: { language: Language }) {
                         href={VENMO}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-300"
+                        className="text-gray-500 underline underline-offset-4 hover:text-black"
                       >
                         @Foti-Ceci
                       </a>
@@ -60,7 +60,7 @@ export default function FAQPage({ language }: { language: Language }) {
                         href={PAYPAL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-300"
+                        className="text-gray-500 underline underline-offset-4 hover:text-black"
                       >
                         @FotiCeci
                       </a>
